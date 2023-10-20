@@ -1,20 +1,39 @@
-body{
-    background-color: black;
-    margin: 0;
+body {
+  background-color: black;
+  margin: 0;
+  font-family: sans-serif;
 }
-.container{
-    color: whitesmoke;
+.container {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
 }
-.header-left{
-    background-color: darkolivegreen;
-    width: 50%;
-    display: flex;
+header {
+    background-color: rgb(19, 85, 6);
 }
-.title {
-    background-color: aqua;
-    flex: 2;
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.menu-tile {
-    background-color: brown;
-    flex: 1;
+header li {
+  display: inline-block;
+}
+header a {
+  display: block;
+  padding: 0.875rem;
+}
+header a:hover {
+    background-color: rgb(165, 8, 20);
+}
+.nav-right {
+  float: right;
+  color: aliceblue;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
 }
