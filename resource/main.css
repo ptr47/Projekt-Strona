@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+.container{
+    color: whitesmoke;
+}
+.header-left{
+    background-color: darkolivegreen;
+    width: 50%;
+    display: flex;
+}
+.title {
+    background-color: aqua;
+    flex: 2;
+}
+.menu-tile {
+    background-color: brown;
+    flex: 1;
+}
