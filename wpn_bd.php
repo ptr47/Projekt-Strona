@@ -14,7 +14,7 @@
 
   <body>
     <div class="container">
-      <header>
+    <header>
         <div class="menu">
           <a href="index.html">Home</a>
           <button class="hamburgerMenu invisible">Menu</button>
@@ -28,9 +28,14 @@
         </ul>
       </header>
       <main>
+        <div class="search">
+          <input /><button><img style="height: 100%; width: 100%;"src="img/magnifying-glass.png" alt="search"></button>
+        </div>
         <br />content
       </main>
-      <footer></footer>
+      <footer>
+
+      </footer>
     </div>
     <script src="scripts/responsive.js"></script>
   </body>

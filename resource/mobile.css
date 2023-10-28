@@ -1,0 +1,23 @@
+.invisible
+{
+    display: none
+}
+.hamburgerMenu 
+{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+@media(max-width:900px)
+{
+    .container{
+        margin: 0;
+    }
+    main{
+        padding: 1rem;
+        text-align: center;
+    }
+    header ul {
+        display: none;
+    }
+}
