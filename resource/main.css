@@ -1,10 +1,10 @@
 :root {
-  --beige: #E5E9D8;
-  --white: #EBEBEB;
-  --blue:  #65A1B8;
-  --green: #5B9A63;
-  --fontdark: #0E0806;
-  --fontlight: #EBEBEB;
+  --beige: #e5e9d8;
+  --white: #ebebeb;
+  --blue: #65a1b8;
+  --green: #5b9a63;
+  --fontdark: #0e0806;
+  --fontlight: #ebebeb;
   --orange: #f57543;
 }
 
@@ -30,9 +30,8 @@ header {
   margin: 0;
   padding: 0;
 }
-.menu
-{
-  font-size:x-large;
+.menu {
+  font-size: x-large;
   width: 100%;
   text-align: center;
 }
