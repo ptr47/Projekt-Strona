@@ -5,7 +5,7 @@
   --green: #5B9A63;
   --fontdark: #0E0806;
   --fontlight: #EBEBEB;
-  --orange: #FF5E1F;
+  --orange: #f57543;
 }
 
 body {
@@ -22,6 +22,7 @@ body {
 main {
   padding: 1rem 5rem;
   background-color: var(--beige);
+  min-height: 70vh;
 }
 header {
   background-color: var(--green);
