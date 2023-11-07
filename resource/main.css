@@ -84,3 +84,10 @@ a:visited {
 .search button {
   height: 100%;
 }
+.block {
+  display: flex;
+}
+.block-image {
+  font-size: smaller;
+  text-align: center;
+}
