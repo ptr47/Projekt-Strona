@@ -86,8 +86,12 @@ a:visited {
 }
 .block {
   display: flex;
+  gap: 1rem;
 }
 .block-image {
   font-size: smaller;
+  text-align: center;
+}
+main h3 {
   text-align: center;
 }
