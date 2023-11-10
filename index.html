@@ -9,22 +9,34 @@
   <title>Strona główna</title>
 </head>
 
-<body onload="responsive()" onresize="responsive()">
+<body>
   <div class="container">
+    <!--Navbar begin-->
     <header>
+      <div id="hamburgerMenu" class="hamburger-menu">
+        <button onclick="showDropdown()" class="m-dropbtn">Menu</button>
+        <div id="mobileDropdown" class="m-dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="history.html">Historia</a>
+          <a href="classification.html">Klasyfikacja</a>
+          <a href="ammo.html">O amunicji</a>
+          <a href="database.html">Szukaj</a>
+          <a href="#">Login</a>
+        </div>
+      </div>
       <div class="menu">
         <a href="index.html">Home</a>
-        <button onclick="dropdown()" id="hamburgerMenu" class="invisible">Menu</button>
-        <!--<div class=""-->
+        <ul class="desktop">
+          <li><a href="history.html">Historia</a></li>
+          <li><a href="classification.html">Klasyfikacja</a></li>
+          <li><a href="ammo.html">O amunicji</a></li>
+          <li><a href="database.html">Szukaj</a></li>
+          <li class="nav-right"><a href="#">Login</a></li>
+        </ul>
       </div>
-      <ul class="desktop">
-        <li><a href="history.html">Historia</a></li>
-        <li><a href="classification.html">Klasyfikacja</a></li>
-        <li><a href="ammo.html">O amunicji</a></li>
-        <li><a href="database.html">Szukaj</a></li>
-        <li class="nav-right"><a href="#">Login</a></li>
-      </ul>
+
     </header>
+    <!--Navbar end-->
     <main><br />Strona poświęcona broni palnej i amunicji</main>
     <footer>Piotr Kurdziel</footer>
   </div>

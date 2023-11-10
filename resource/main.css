@@ -3,6 +3,7 @@
   --white: #ebebeb;
   --blue: #65a1b8;
   --green: #5b9a63;
+  --shadowgreen: #48754e;
   --fontdark: #0e0806;
   --fontlight: #ebebeb;
   --orange: #f57543;
@@ -36,7 +37,11 @@ footer {
 .menu {
   font-size: x-large;
   width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.desktop {
+  font-size: medium;
 }
 .menu a {
   width: fit-content;
@@ -48,20 +53,20 @@ footer {
   padding: 0.375rem;
   text-align: center;
 }
-header ul {
+.menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-header li {
+.menu li {
   display: inline-block;
 }
-header a {
+.menu a {
   font-weight: bold;
   display: block;
   padding: 0.5rem;
 }
-header a:hover {
+.menu a:hover {
   background-color: var(--orange);
 }
 .nav-right {
