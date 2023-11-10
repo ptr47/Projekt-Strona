@@ -9,12 +9,12 @@
   <title>Klasyfikacja</title>
 </head>
 
-<body>
+<body onload="responsive()" onresize="responsive()">
   <div class="container">
     <header>
       <div class="menu">
         <a href="index.html">Home</a>
-        <button class="hamburgerMenu invisible">Menu</button>
+        <button id="hamburgerMenu" class="invisible">Menu</button>
       </div>
       <ul class="desktop">
         <li><a href="history.html">Historia</a></li>
@@ -25,16 +25,14 @@
       </ul>
     </header>
     <main>
-      <div class="search">
-        <input /><button>
-          <img style="height: 100%; width: 100%" src="img/magnifying-glass.png" alt="search" />
-        </button>
-      </div>
       <br />Klasyfikacja
     </main>
     <footer></footer>
   </div>
+  <!--Scripts below-->
   <script src="scripts/responsive.js"></script>
+  <script src="scripts/dropdownMenu.js"></script>
+  <!--End of scripts-->
 </body>
 
 </html>

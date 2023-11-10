@@ -9,12 +9,11 @@
   <title>Historia</title>
 </head>
 
-<body>
+<body onload="responsive()" onresize="responsive()">
   <div class="container">
     <header>
       <div class="menu">
-        <a href="index.html">Home</a>
-        <button class="hamburgerMenu invisible">Menu</button>
+        <a href="index.html">Home</a><button id="hamburgerMenu" class="invisible">Menu</button>
       </div>
       <ul class="desktop">
         <li><a href="history.html">Historia</a></li>
@@ -43,7 +42,7 @@
         <div class="block-image">
           <a href="https://en.wikipedia.org/wiki/Gun#/media/File:HandBombardWesternEurope1380.jpg" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/HandBombardWesternEurope1380.jpg"
-              height="200px" alt="Ręczna armata"></a>
+              alt="Ręczna armata"></a>
           Ręczna armata z 1380 roku
         </div>
       </div>
@@ -62,12 +61,6 @@
       </div>
       <h3>Początki</h3>
       <div class="block">
-        <div class="block-image">
-          <a href="https://en.wikipedia.org/wiki/Gun#/media/File:HandBombardWesternEurope1380.jpg" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/HandBombardWesternEurope1380.jpg"
-              height="200px" alt="Ręczna armata"></a>
-          Ręczna armata z 1380 roku
-        </div>
         <div class="block-text">
           Historia broni palnej sięga IX wieku, kiedy w Chinach wynaleziono czarny proch. Jego wybuchową naturę
           wykorzystano do produkcji pierwszych bomb. Produkcja europejskiej broni palnej zaczęła się dopiero w XIV
@@ -82,11 +75,20 @@
           podpalanie kawałków drewna, poźniej służyły do tego rozgrzane żelazne pręty, by w końcu wykorzystywać do tego
           lont.</div>
 
+        <div class="block-image left ">
+          <a href="https://en.wikipedia.org/wiki/Gun#/media/File:HandBombardWesternEurope1380.jpg" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/HandBombardWesternEurope1380.jpg"
+              height="200px" alt="Ręczna armata"></a>
+          Ręczna armata z 1380 roku
+        </div>
       </div>
     </main>
     <footer></footer>
   </div>
+  <!--Scripts below-->
   <script src="scripts/responsive.js"></script>
+  <script src="scripts/dropdownMenu.js"></script>
+  <!--End of scripts-->
 </body>
 
 </html>

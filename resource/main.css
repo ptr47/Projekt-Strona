@@ -30,6 +30,9 @@ header {
   margin: 0;
   padding: 0;
 }
+footer {
+  font-size: 0.675rem;
+}
 .menu {
   font-size: x-large;
   width: 100%;
@@ -88,10 +91,20 @@ a:visited {
   display: flex;
   gap: 1rem;
 }
+.block .left {
+  float: left;
+}
 .block-image {
   font-size: smaller;
   text-align: center;
 }
+.block-image img {
+  height: auto;
+  max-width: 100%;
+}
 main h3 {
   text-align: center;
+}
+.tile-container {
+  display: flex;
 }

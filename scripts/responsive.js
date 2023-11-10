@@ -1,11 +1,13 @@
-const hamburger = document.querySelector(".hamburgerMenu")
-const width = window.innerWidth
-console.log(width)
 function responsive()
 {
-    if(width<900)
+    const width = window.innerWidth
+    console.log(width)
+    if(width<768)
     {
-        hamburger.classList.remove("invisible")
+        document.getElementById("hamburgerMenu").classList.remove("invisible")
+    }
+    else
+    {
+        document.getElementById("hamburgerMenu").classList.add("invisible")
     }
 }
-window.addEventListener("load",responsive())
