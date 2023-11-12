@@ -1,14 +1,20 @@
 :root {
-  --beige: #e5e9d8;
+  --beige: #dfe2d5;
   --white: #ebebeb;
-  --blue: #65a1b8;
-  --green: #5b9a63;
-  --shadowgreen: #48754e;
+  --blue: #518194;
+  --green: #458d50;
+  --darkgray: #747474;
+  --shadowgreen: #3d6b43;
   --fontdark: #0e0806;
   --fontlight: #ebebeb;
   --orange: #f57543;
 }
-
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
 body {
   background-color: var(--blue);
   color: var(--fontdark);
@@ -26,32 +32,27 @@ main {
   min-height: 70vh;
 }
 header {
+  font-size: x-large;
   background-color: var(--green);
+  color: var(--fontlight);
   display: inline-block;
   margin: 0;
   padding: 0;
 }
+header a {
+  color: var(--fontlight);
+}
 footer {
   font-size: 0.675rem;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 0.375rem;
+  text-align: center;
 }
 .menu {
-  font-size: x-large;
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-.desktop {
-  font-size: medium;
-}
-.menu a {
-  width: fit-content;
-  padding: 0.5rem 1em;
-  margin: 0 auto;
-}
-footer {
-  background-color: var(--green);
-  padding: 0.375rem;
-  text-align: center;
 }
 .menu ul {
   list-style-type: none;
@@ -62,23 +63,23 @@ footer {
   display: inline-block;
 }
 .menu a {
+  width: fit-content;
+  padding: 0.5rem 1em;
+  margin: 0 auto;
   font-weight: bold;
   display: block;
   padding: 0.5rem;
 }
 .menu a:hover {
-  background-color: var(--orange);
+  background-color: var(--shadowgreen);
+}
+.desktop a {
+  font-size: medium;
 }
 .nav-right {
   float: right;
 }
-a {
-  text-decoration: none;
-  color: var(--fontdark);
-}
-a:visited {
-  text-decoration: none;
-}
+
 .search {
   height: 1.25em;
   width: max-content;
