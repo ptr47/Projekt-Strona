@@ -2,6 +2,7 @@
   --beige: #dfe2d5;
   --white: #ebebeb;
   --blue: #518194;
+  --linkblue: #05b;
   --green: #458d50;
   --darkgray: #747474;
   --shadowgreen: #3d6b43;
@@ -93,12 +94,21 @@ footer {
 .search button {
   height: 100%;
 }
+.left {
+  float: left;
+}
 .block {
   display: flex;
   gap: 1rem;
 }
-.block .left {
-  float: left;
+.block a {
+  color: var(--linkblue);
+}
+.block a:hover{
+  text-decoration: underline;
+}
+.block-text {
+  text-align: left;
 }
 .block-image {
   font-size: smaller;
@@ -106,7 +116,7 @@ footer {
 }
 .block-image img {
   height: auto;
-  max-width: 100%;
+  max-width: 30em;
 }
 main h3 {
   text-align: center;
