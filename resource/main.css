@@ -108,7 +108,7 @@ footer {
   text-decoration: underline;
 }
 .block-text {
-  text-align: left;
+  text-align: justify;
 }
 .block-image {
   font-size: smaller;
@@ -116,11 +116,23 @@ footer {
 }
 .block-image img {
   height: auto;
-  max-width: 30em;
+  border-radius: 10px;
+  max-width:100%;
 }
 main h3 {
   text-align: center;
 }
 .tile-container {
   display: flex;
+}
+#classification-select {
+  float: right;
+  box-sizing: border-box;
+  width: 20rem;
+  font-size: medium;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: rgb(236, 241, 223);
 }
