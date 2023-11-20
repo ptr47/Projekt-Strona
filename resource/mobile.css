@@ -67,4 +67,8 @@
   .block-image img {
     max-width: 70%;
   }
+  #classification-select {
+    float: none;
+    font-size: medium;
+  }
 }

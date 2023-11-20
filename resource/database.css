@@ -1,0 +1,31 @@
+.sort {
+  text-align: center;
+  display: flex;
+  gap: 0.25rem;
+  width: 100%;
+}
+.search-bar {
+  height: 1.25em;
+  margin: auto;
+}
+.search-bar input {
+  outline: none;
+  border: none;
+}
+.search-bar button {
+  height: 100%;
+  border: 0;
+}
+.tile-container {
+  padding: 1rem;
+  width: 100%;
+  display: inline-block;
+}
+.tile-container tr {
+  margin: 1rem;
+}
+.tile-container td {
+  margin: 1rem;
+  border: 2px solid black;
+  padding: 1rem;
+}

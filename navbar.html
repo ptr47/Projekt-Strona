@@ -1,0 +1,67 @@
+<html>
+<style>
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    .menu a {
+        width: fit-content;
+        padding: 0.5rem 1em;
+        margin: 0 auto;
+        font-weight: bold;
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .menu a:hover {
+        background-color: var(--shadowgreen);
+    }
+
+    .desktop a {
+        font-size: medium;
+    }
+
+    .nav-right {
+        float: right;
+    }
+</style>
+
+<body>
+    <div id="hamburgerMenu" class="hamburger-menu">
+        <button onclick="showDropdown()" class="m-dropbtn">Menu</button>
+        <div id="mobileDropdown" class="m-dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="history.html">Historia</a>
+            <a href="classification.html">Klasyfikacja</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="forum.html">Forum</a>
+            <a href="database.html">Szukaj</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <ul class="desktop">
+            <li><a href="history.html">Historia</a></li>
+            <li><a href="classification.html">Klasyfikacja</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="database.html">Szukaj</a></li>
+            <li class="nav-right"><a href="#">Login</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
