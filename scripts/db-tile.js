@@ -1,0 +1,1 @@
+$(".tile").modal("show")

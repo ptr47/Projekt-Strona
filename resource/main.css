@@ -29,7 +29,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Roboto, sans-serif;}
   flex-direction: column;
 }
 main {
-  padding: 1rem 5rem;
+  padding: 1.5rem 5rem;
   background-color: var(--beige);
   min-height: 70vh;
 }
@@ -76,19 +76,18 @@ footer {
 main h3 {
   text-align: center;
 }
-.tile-container {
-  display: flex;
-}
 #classification-select {
   float: right;
-  box-sizing: border-box;
   width: 20rem;
   font-size: normal;
   text-align: center;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   outline: none;
   cursor: pointer;
-  border: none;
-  border-radius: 0.25rem;
-  background-color: rgb(236, 241, 223);
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: var(--white);
+}
+.classification {
+  margin: auto;
 }

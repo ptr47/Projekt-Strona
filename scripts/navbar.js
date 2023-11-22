@@ -1,3 +1,3 @@
 $(function () {
-    $("#include-navbar").load("navbar.html")
+    $("#include-navbar").load("resource/navbar.html")
 });

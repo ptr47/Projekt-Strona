@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="resource/mobile.css" />
   <link rel="stylesheet" href="resource/database.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <script src="https://kit.fontawesome.com/e4a335c558.js" crossorigin="anonymous"></script>
   <script src="scripts/jquery-3.7.1.min.js"></script>
 </head>
 
@@ -23,29 +24,42 @@
     <main>
       <div class="sort">
         <div class="search-bar">
-          <input /><button>
-            <img style="height: 100%; width: 100%" src="img/magnifying-glass.png" alt="search" />
+          <input id="db-input" oninput="filter()" placeholder="Szukaj..."><button>
+            <i class='fas fa-search'></i>
           </button>
         </div>
+        <div class="sort-list"></div>
       </div>
-      <table class="tile-container">
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-        </tr>
-      </table>
+      <script src="scripts/tile.js"></script>
+      <div class="tile-container">
+        <div class="tile">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Ak74l.png" alt="AK-74">
+          <p class="tile-name">AK-74</p>
+        </div>
+        <div class="tile">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/RPK_Machine_Gun_7.62_x_39.jpg" alt="RPK">
+          <p class="tile-name">RPK</p>
+        </div>
+        <div class="tile">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/M16A2_rightside_noBG.jpg" alt="M16A2">
+          <p class="tile-name">M16A2</p>
+        </div>
+        <div class="tile">
+          <img src="img/M1918A2BAR.webp" alt="M1918A2 BAR">
+          <p class="tile-name">M1918A2 BAR</p>
+        </div>
+        <div class="tile">
+          <img src="img/M1Garand.webp" alt="M1 Garand">
+          <p class="tile-name">M1 Garand</p>
+        </div>
+      </div>
     </main>
     <footer></footer>
   </div>
   <!--Scripts below-->
   <script src="scripts/responsive.js"></script>
   <script src="scripts/dropdownMenu.js"></script>
+  <script src="scripts/db-filter.js"></script>
   <!--End of scripts-->
 </body>
 
