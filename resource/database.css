@@ -21,6 +21,12 @@
   width: 24px;
   border-radius: 0 4px 4px 0;
 }
+.sort-types {
+  font-size: small;
+}
+.sort-list {
+
+}
 .tile-container {
   display: flex;
   flex-wrap: wrap;
@@ -46,6 +52,9 @@
 }
 .tile p {
   margin: 0;
+}
+.tile-type {
+  display: none;
 }
 .tile img {
   width: 100%;
