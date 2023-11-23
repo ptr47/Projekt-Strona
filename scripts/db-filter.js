@@ -31,6 +31,12 @@ $(function () {
         changeWtoA();
     }
 })
+function resetFilters() {
+    document.getElementById("db-input").value =""
+    document.getElementById("db-type-ammo").value =""
+    document.getElementById("db-type-wpn").value =""
+    filter();
+}
 
 function changeWtoA() {
     $('#container-weapons').hide();
