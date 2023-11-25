@@ -10,6 +10,9 @@
   --fontlight: #ebebeb;
   --orange: #f57543;
 }
+* {
+  box-sizing: border-box;
+}
 a {
   text-decoration: none;
 }
@@ -31,7 +34,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Roboto, sans-serif;}
 main {
   padding: 1.5rem 5rem;
   background-color: var(--beige);
-  min-height: 70vh;
+  min-height: 80vh;
+  position: relative;
 }
 header {
   font-size: x-large;

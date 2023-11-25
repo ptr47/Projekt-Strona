@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>O amunicji</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="resource/main.css" />
     <link rel="stylesheet" href="resource/mobile.css" />
+    <link rel="stylesheet" href="resource/quiz.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <script src="scripts/jquery-3.7.1.min.js"></script>
 </head>
@@ -17,16 +18,40 @@
         <header id="include-navbar">
             <!-- navbar.html -->
         </header>
-    <script src="scripts/navbar.js"></script>
+        <script src="scripts/navbar.js"></script>
         <!--Navbar end-->
         <main>
-            <br>Strona w budowie...
+            <button onclick="startQuiz()" id="quiz-start">START</button>
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p>Question?</p>
+                    <input type="radio" name="question-1" id="q1-a"><label for="q1-a">A</label>
+                    <input type="radio" name="question-1" id="q1-b"><label for="q1-b">B</label>
+                    <input type="radio" name="question-1" id="q1-c"><label for="q1-c">C</label>
+                    <input type="radio" name="question-1" id="q1-d"><label for="q1-d">D</label>
+                </div>
+                <div class="quiz-question">
+                    <p>Question?</p>
+                    <input type="radio" name="question-1" id="q1-a"><label for="q1-a">A</label>
+                    <input type="radio" name="question-1" id="q1-b"><label for="q1-b">B</label>
+                    <input type="radio" name="question-1" id="q1-c"><label for="q1-c">C</label>
+                    <input type="radio" name="question-1" id="q1-d"><label for="q1-d">D</label>
+                </div>
+                <div class="quiz-question">
+                    <p>Question?</p>
+                    <input type="radio" name="question-1" id="q1-a"><label for="q1-a">A</label>
+                    <input type="radio" name="question-1" id="q1-b"><label for="q1-b">B</label>
+                    <input type="radio" name="question-1" id="q1-c"><label for="q1-c">C</label>
+                    <input type="radio" name="question-1" id="q1-d"><label for="q1-d">D</label>
+                </div>
+            </div>
         </main>
         <footer></footer>
     </div>
     <!--Scripts below-->
     <script src="scripts/responsive.js"></script>
     <script src="scripts/dropdownMenu.js"></script>
+    <script src="scripts/quiz.js"></script>
     <!--End of scripts-->
 </body>
 

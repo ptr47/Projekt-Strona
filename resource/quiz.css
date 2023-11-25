@@ -1,0 +1,15 @@
+#quiz-start {
+    width: 3rem;
+    height: 3rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.quiz-container {
+    display: none;
+}
+.quiz-question {
+    text-align: center;
+}

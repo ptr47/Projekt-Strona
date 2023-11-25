@@ -1,9 +1,9 @@
+
 .sort {
-  margin: 0 20%;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
-  width: 60%;
+  width: 100%;
 }
 .search-bar {
   display: inline-block;
@@ -17,15 +17,19 @@
 }
 .search-bar button {
   border: none;
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 22px;
   border-radius: 0 4px 4px 0;
 }
-.sort-types {
-  font-size: small;
-}
 .sort-list {
-
+  display: flex;
+  gap: 0.5em;
+}
+.sort-types {
+  display: flex;
+}
+#db-reset-button {
+  width: fit-content;
 }
 .tile-container {
   display: flex;
@@ -35,6 +39,11 @@
   width: 100%;
   justify-content: space-between;
 }
+/* Breaks display: flex 
+#container-ammo {
+  display: none;
+}
+*/
 .tile {
   display: flex;
   flex-direction: column;
@@ -53,7 +62,8 @@
 .tile p {
   margin: 0;
 }
-.tile-type {
+.tile-type,
+.tile-id {
   display: none;
 }
 .tile img {
@@ -61,14 +71,30 @@
   height: auto;
   margin: auto;
 }
-@media(max-width: 768px) {
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
   .sort {
     margin: 0;
     flex-direction: column;
     width: 100%;
     font-size: large;
   }
-  .search-bar input{
+  .search-bar {
+    height: fit-content;
+  }
+  .search-bar input {
     font-size: inherit;
     width: 100%;
     height: 2rem;
@@ -76,5 +102,21 @@
   }
   .search-bar button {
     display: none;
+  }
+  input[type="radio"] {
+    width: 100%;
+    height: 1.5em;
+  }
+  .sort-list {
+    margin: 0.5em 0;
+    justify-content: center ;
+  }
+  .sort-list select {
+    font-size: inherit;
+    height: 1.5rem;
+  }
+  .sort-list button {
+    font-size: inherit;
+    padding: 0.5em;
   }
 }

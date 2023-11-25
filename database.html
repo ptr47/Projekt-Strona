@@ -29,11 +29,15 @@
             <i class='fas fa-search'></i>
           </button>
         </div>
-        <div class="sort-types">
-          <input onchange="changeAtoW()" type="radio" name="wpn-ammo" id="radio-wpn" checked><label
-            for="radio-wpn">Broń</label>
-          <input onchange="changeWtoA()" type="radio" name="wpn-ammo" id="radio-ammo"><label
-            for="radio-ammo">Amunicja</label>
+        <div class="sort-list">
+          <div class="sort-type">
+            <input onchange="changeAtoW()" type="radio" name="wpn-ammo" id="radio-wpn" checked>
+            <label for="radio-wpn">Broń</label>
+          </div>
+          <div class="sort-type">
+            <input onchange="changeWtoA()" type="radio" name="wpn-ammo" id="radio-ammo">
+            <label for="radio-ammo">Amunicja</label>
+          </div>
         </div>
         <div class="sort-list">
           Rodzaj:
@@ -55,7 +59,7 @@
             <option value="karabinowa">karabinowa</option>
           </select>
         </div>
-        <button onclick="resetFilters()">Reset</button>
+        <div class="sort-list"><button onclick="resetFilters()" id="db-reset-button">Reset</button></div>
       </div>
       <!-- TODO: dynamically create tiles from db  -->
       <!-- CONTAINER WEAPONS -->
