@@ -7,6 +7,7 @@
     <title>Quiz</title>
     <link rel="stylesheet" href="resource/main.css" />
     <link rel="stylesheet" href="resource/mobile.css" />
+    <link rel="stylesheet" href="resource/database.css" />
     <link rel="stylesheet" href="resource/quiz.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <script src="scripts/jquery-3.7.1.min.js"></script>
@@ -23,7 +24,6 @@
         <main>
             <button onclick="startQuiz()" id="quiz-start">START</button>
             <div class="quiz-container">
-                <div id="txt"></div>
                 <div class="quiz-question">
                     <p>Question?</p>
                     <input type="radio" name="question-1" id="q1-a"><label for="q1-a">A</label>
@@ -46,24 +46,34 @@
                     <input type="radio" name="question-3" id="q3-d"><label for="q3-d">D</label>
                 </div>
                 <div class="quiz-question">
+                    <p>Question?</p>
+                    <input type="radio" name="question-4" id="q4-a"><label for="q4-a">A</label>
+                    <input type="radio" name="question-4" id="q4-b"><label for="q4-b">B</label>
+                    <input type="radio" name="question-4" id="q4-c"><label for="q4-c">C</label>
+                    <input type="radio" name="question-4" id="q4-d"><label for="q4-d">D</label>
+                </div>
+                <div class="quiz-question img-q">
                     <p>Dopasuj nazwy do obrazków</p>
                     <div class="question-images">
-                        <img src="" alt="" id="q-i1">
-                        <img src="" alt="" id="q-i2">
-                        <img src="" alt="" id="q-i3">
+                        <div class="tile" id="q-i1"><img src="img/guns/M16A2.jpg"><p class="target"></p></div>
+                        <div class="tile" id="q-i2"><img src="img/guns/Ak74.png"><p class="target"></p></div>
+                        <div class="tile" id="q-i3"><img src="img/guns/M1918A2BAR.webp"><p class="target"></p></div> 
                     </div>
-                    <div class="question-places">
-                        <span id="q-p1"> </span>
-                        <span id="q-p1"> </span>
-                        <span id="q-p1"> </span>
-                    </div>
+                    <br>
                     <div class="question-names">
-                        <span id="q-n1">M16</span>
-                        <span id="q-n2">AK-74</span>
-                        <span id="q-n3">Beretta M9</span>
+                        <div draggable="true" id="q-n1">M1 Garand</div>
+                        <div draggable="true" id="q-n2">M16A2</div>
+                        <div draggable="true" id="q-n3">AK-74</div>
+                        <div draggable="true" id="q-n4">Beretta M9</div>
+                        <div draggable="true" id="q-n5">M1918A2 BAR</div>
                     </div>
                 </div>
+                <br>
                 <button onclick="endQuiz()" id="quiz-finish">Koniec</button>
+            </div>
+            <div id="quiz-result">
+                <h3>Koniec quizu</h3>
+                <p>Twój wynik to: </p>
             </div>
         </main>
         <footer></footer>
