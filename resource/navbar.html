@@ -23,6 +23,7 @@
         font-weight: bold;
         display: block;
         padding: 0.5rem;
+        transition: 0.3s;
     }
 
     .menu a:hover {
@@ -44,29 +45,31 @@
         }
     }
 </style>
-
+<head>
+  <script src="https://kit.fontawesome.com/e4a335c558.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <div id="hamburgerMenu" class="hamburger-menu">
         <button onclick="showDropdown()" class="m-dropbtn">Menu</button>
         <div id="mobileDropdown" class="m-dropdown-content">
-            <a href="index.html">Home</a>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
             <a href="history.html">Historia</a>
             <a href="classification.html">Klasyfikacja</a>
             <a href="quiz.html">Quiz</a>
             <a href="forum.html">Forum</a>
             <a href="database.html">Szukaj</a>
-            <a href="#">Login</a>
+            <a href="#"><i class="fas fa-user-circle"></i> Login</a>
         </div>
     </div>
     <div class="menu">
-        <a href="index.html">Home</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
         <ul class="desktop">
             <li><a href="history.html">Historia</a></li>
             <li><a href="classification.html">Klasyfikacja</a></li>
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="forum.html">Forum</a></li>
             <li><a href="database.html">Szukaj</a></li>
-            <li class="nav-right"><a href="#">Login</a></li>
+            <li class="nav-right"><a href="#"><i class="fas fa-user-circle"></i></a></li>
         </ul>
     </div>
 </body>

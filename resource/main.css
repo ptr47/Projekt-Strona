@@ -14,6 +14,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
 }
@@ -60,7 +63,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Roboto, sans-serif;}
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }

@@ -34,12 +34,14 @@
 }
 .target > * {
   margin: auto;
+  cursor: grab;
 }
 .question-names {
   display: flex;
   padding: 0.5rem;
 }
 .question-names > * {
+  cursor: grab;
   margin: auto;
   border: 1px solid black;
   border-radius: 6px;
