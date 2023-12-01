@@ -1,0 +1,101 @@
+<CLASSIFICATION>
+    <TYPE> <!-- WEAPON TYPE -->
+        <ITEM>
+            <NAME>Pistolet</NAME>
+            <DESC> broń strzelecka przystosowana do strzelania amunicją pistoletową,
+                niekiedy także rewolwerową, umożliwiająca strzelanie z jednej ręki</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Rewolwer</NAME>
+            <DESC> broń strzelecka przystosowana do strzelania amunicją rewolwerową, lub rzadziej
+                pistoletową, wyposażona w bęben obrotowy w kształcie walca (z kilkoma komorami
+                nabojowymi), umożliwiająca strzelanie z jednej ręki </DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Pistolet maszynowy</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Karabinek</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Karabin</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Strzelba</NAME>
+            <DESC></DESC>
+        </ITEM>
+    </TYPE>
+    <TYPE> <!-- ACTION -->
+        <ITEM>
+            <NAME>Rewolwer</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Pistolet maszynowy</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Karabinek</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Karabin</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Strzelba</NAME>
+            <DESC></DESC>
+        </ITEM>
+    </TYPE>
+    <TYPE> <!-- FIREMODE -->
+        <ITEM>
+            <NAME>Pistolet</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Rewolwer</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Pistolet maszynowy</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Karabinek</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Karabin</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Strzelba</NAME>
+            <DESC></DESC>
+        </ITEM>
+    </TYPE>
+    <TYPE> <!-- AMMO TYPE -->
+        <ITEM>
+            <NAME>Amunicja pistoletowa</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Amunicja rewolwerowa</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Amunicja pośrednia</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Amunicja karabinowa</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Amunicja śrutowa</NAME>
+            <DESC></DESC>
+        </ITEM>
+    </TYPE>
+</CLASSIFICATION>

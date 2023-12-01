@@ -6,7 +6,7 @@
 }
 .hamburger-menu button {
   font-size: x-large;
-  background-color: var(--green);
+  background: url("../img/camo.jpg");
   color: var(--fontlight);
   border: none;
   cursor: pointer;

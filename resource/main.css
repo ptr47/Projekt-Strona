@@ -23,13 +23,15 @@ a {
 a:visited {
   text-decoration: none;
 }
+body,h1,h2,h3,h4,h5,h6 {font-family: Roboto, sans-serif;}
 body {
-  background-color: var(--blue);
+  background-color: #888;
+  background-image: url("../img/moro.jpg");
+  background-position: fixed;
   color: var(--fontdark);
   margin: 0;
   font-family: sans-serif;
 }
-body,h1,h2,h3,h4,h5,h6 {font-family: Roboto, sans-serif;}
 .container {
   margin: 0 8rem;
   display: flex;
