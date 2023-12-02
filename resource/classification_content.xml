@@ -1,0 +1,119 @@
+<CLASSIFICATION>
+    <TYPE> <!-- WEAPON TYPE -->
+        <ITEM>
+            <NAME>Pistolet</NAME>
+            <DESC>Broń strzelecka przystosowana do strzelania amunicją pistoletową,
+                niekiedy także rewolwerową, umożliwiająca strzelanie z jednej ręki</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Rewolwer</NAME>
+            <DESC>Broń strzelecka przystosowana do strzelania amunicją rewolwerową, niekiedy także
+                pistoletową. Jest zasilany z bębenka nabojowego, stanowiącego połączenie magazynka
+                z komorą w której odpalany jest nabój. Jest on integralną częścią broni i w
+                zdecydowanej większości przypadków nie ma możliwości jego szybkiej wymiany </DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Pistolet maszynowy</NAME>
+            <DESC>Broń strzelecka przystosowana do strzelania amunicją pistoletową, o
+                cechach broni strzeleckiej samoczynnej lub broni strzeleckiej
+                samoczynno-samopowtarzalnej, wyposażona zwykle w kolbę</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Karabin</NAME>
+            <DESC>Broń strzelecka przystosowana do strzelania amunicją karabinową. Skrócona wersja
+                karabinu to subkarabin, jeżeli ma lufę o długości poniżej 450 mm (bez urządzenia
+                wylotowego) </DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Karabinek</NAME>
+            <DESC>Broń strzelecka przystosowana do strzelania amunicją pośrednią. Skrócona wersja
+                karabinka to subkarabinek, jeżeli ma lufę o długości poniżej 350 mm (bez urządzenia
+                wylotowego)</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Strzelba</NAME>
+            <DESC>Broń strzelecka przystosowana do strzelania amunicją śrutową. Takiego pocisku nie
+                można stabilizować, dlatego strzelby są najczęściej gładkolufowe.</DESC>
+        </ITEM>
+    </TYPE>
+    <TYPE> <!-- ACTION -->
+        <ITEM>
+            <NAME></NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME></NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME></NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME></NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME></NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME></NAME>
+            <DESC></DESC>
+        </ITEM>
+    </TYPE>
+    <TYPE> <!-- FIREMODE -->
+        <ITEM>
+            <NAME>Broń jednostrzałowa</NAME>
+            <DESC>Broń strzelecka nieautomatyczna, w której każdy kolejny nabój jest wprowadzany
+                ręcznie do komory nabojowej (broń nie posiada magazynka). Do tej klasy broni zalicza
+                się broń odprzodową, najstarsze typy broni odtylcowej oraz
+                niektóre wielkokalibrowe karabiny wyborowe.</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Broń powtarzalna</NAME>
+            <DESC>Broń strzelecka nieautomatyczna mogąca strzelać wyłącznie ogniem pojedynczym,
+                wyposażona w magazyn amunicyjny, w której wszystkie czynności
+                przeładowania kolejnych nabojów z magazynka amunicyjnego do komory nabojowej
+                wykonuje strzelający za pomocą mechanizmów ręcznego przeładowania</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Broń samopowtarzalna</NAME>
+            <DESC>Broń strzelecka automatyczna strzelająca wyłącznie ogniem pojedynczym.
+                Przeładowanie następuje automatycznie aż do czasu opróżnienia magazynka. Aby oddać
+                kolejny strzał, należy zwolnić i ponownie
+                nacisnąć spust. Do broni samopowtarzalnej zalicza się większość pistoletów, a także
+                niektóre strzelby, karabinki oraz karabiny (szczególnie wyborowe).</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Broń samoczynna</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Broń samoczynno-samopowtarzalna</NAME>
+            <DESC></DESC>
+        </ITEM>
+    </TYPE>
+    <TYPE> <!-- AMMO TYPE -->
+        <ITEM>
+            <NAME>Amunicja pistoletowa</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Amunicja rewolwerowa</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Amunicja pośrednia</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Amunicja karabinowa</NAME>
+            <DESC></DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Amunicja śrutowa</NAME>
+            <DESC></DESC>
+        </ITEM>
+    </TYPE>
+</CLASSIFICATION>
