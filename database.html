@@ -63,52 +63,47 @@
       </div>
       <!-- TODO: dynamically create tiles from db  -->
       <!-- CONTAINER WEAPONS -->
-      <div class="tile-container" id="container-weapons">
-        <div class="tile">
-          <img src="img/guns/Ak74.png" alt="AK-74">
-          <p class="tile-name">AK-74</p>
-          <p class="tile-type">karabinek</p>
-          <p class="tile-id">0</p>
-        </div>
-        <div class="tile">
-          <img src="img/guns/RPK.jpg" alt="RPK">
-          <p class="tile-name">RPK</p>
-          <p class="tile-type">karabinek</p>
-          <p class="tile-id">2</p>
-        </div>
-        <div class="tile">
-          <img src="img/guns/M16A2.jpg" alt="M16A2">
-          <p class="tile-name">M16A2</p>
-          <p class="tile-type">karabinek</p>
-          <p class="tile-id">4</p>
-        </div>
-        <div class="tile">
-          <img src="img/guns/M1918A2BAR.webp" alt="M1918A2 BAR">
-          <p class="tile-name">M1918A2 BAR</p>
-          <p class="tile-type">karabin</p>
-          <p class="tile-id">6</p>
-        </div>
-        <div class="tile">
-          <img src="img/guns/M1Garand.webp" alt="M1 Garand">
-          <p class="tile-name">M1 Garand</p>
-          <p class="tile-type">karabin</p>
-          <p class="tile-id">8</p>
-        </div>
-      </div>
-      <!-- CONTAINER AMMO -->
-      <div class="tile-container" id="container-ammo">
-        <div class="tile">
-          <img src="img/ammo/9x19.jpg" alt="9x19mm Parabellum">
-          <p class="tile-name">9x19mm Parabellum</p>
-          <p class="tile-type">pistoletowa</p>
-          <p class="tile-id">1</p>
-        </div>
-        <div class="tile">
-          <img src="img/ammo/556x45.jpg" alt="5.56x45mm NATO">
-          <p class="tile-name">5.56x45mm NATO</p>
-          <p class="tile-type">pośrednia</p>
-          <p class="tile-id">3</p>
-        </div>
+      <div class="tile-container">
+        <TILE>
+          <div class="tile">
+              <img src="img/guns/Ak74.png" alt="AK-74"></img>
+              <p class="tile-name">AK-74</p>
+              <p class="tile-type">karabinek</p>
+              <p class="tile-id">0</p>
+          </div>
+      </TILE>
+      <TILE>
+          <div class="tile">
+              <img src="img/guns/RPK.jpg" alt="RPK"></img>
+              <p class="tile-name">RPK</p>
+              <p class="tile-type">karabinek</p>
+              <p class="tile-id">2</p>
+          </div>
+      </TILE>
+      <TILE>
+          <div class="tile">
+              <img src="img/guns/M16A2.jpg" alt="M16A2"></img>
+              <p class="tile-name">M16A2</p>
+              <p class="tile-type">karabinek</p>
+              <p class="tile-id">4</p>
+          </div>
+      </TILE>
+      <TILE>
+          <div class="tile">
+              <img src="img/guns/M1918A2BAR.webp" alt="M1918A2 BAR"></img>
+              <p class="tile-name">M1918A2 BAR</p>
+              <p class="tile-type">karabin</p>
+              <p class="tile-id">6</p>
+          </div>
+      </TILE>
+      <TILE>
+          <div class="tile">
+              <img src="img/guns/M1Garand.webp" alt="M1 Garand"></img>
+              <p class="tile-name">M1 Garand</p>
+              <p class="tile-type">karabin</p>
+              <p class="tile-id">8</p>
+          </div>
+      </TILE>
       </div>
     </main>
     <footer></footer>
@@ -118,6 +113,7 @@
   <script src="scripts/dropdownMenu.js"></script>
   <script src="scripts/db-filter.js"></script>
   <script src="scripts/db-tile.js"></script>
+  <script src="scripts/db-items.js"></script>
   <!--End of scripts-->
 </body>
 

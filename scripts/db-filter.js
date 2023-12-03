@@ -23,31 +23,9 @@ function filter() {
     }
 }
 
-$(function () {
-    if (document.getElementById("radio-wpn").checked) {
-        changeAtoW();
-    }
-    else {
-        changeWtoA();
-    }
-})
 function resetFilters() {
     document.getElementById("db-input").value =""
     document.getElementById("db-type-ammo").value =""
     document.getElementById("db-type-wpn").value =""
     filter();
-}
-
-function changeWtoA() {
-    $('#container-weapons').hide();
-    $('#container-ammo').show();
-    $('#db-type-wpn').hide();
-    $('#db-type-ammo').show();
-}
-
-function changeAtoW() {
-    $('#container-weapons').show();
-    $('#container-ammo').hide();
-    $('#db-type-wpn').show();
-    $('#db-type-ammo').hide();
 }
