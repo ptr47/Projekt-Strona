@@ -6,14 +6,21 @@
 }
 .hamburger-menu button {
   font-size: x-large;
-  background: url("../img/camo.jpg");
+  background-color: var(--green);
   color: var(--fontlight);
   border: none;
   cursor: pointer;
   padding: 0.5rem;
 }
+.hamburger-menu .login-button {
+  font-size: large;
+  background-color: var(--darkgray);
+}
 .hamburger-menu button:hover {
   background-color: var(--shadowgreen);
+}
+.hamburger-menu .login-button:hover {
+  background-color: var(--green);
 }
 .m-dropdown-content {
   background-color: var(--darkgray);

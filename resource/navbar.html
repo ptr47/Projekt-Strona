@@ -47,6 +47,7 @@
 </style>
 <head>
   <script src="https://kit.fontawesome.com/e4a335c558.js" crossorigin="anonymous"></script>
+  
 </head>
 <body>
     <div id="hamburgerMenu" class="hamburger-menu">
@@ -58,7 +59,7 @@
             <a href="quiz.html">Quiz</a>
             <a href="forum.html">Forum</a>
             <a href="database.html">Szukaj</a>
-            <a href="#"><i class="fas fa-user-circle"></i> Login</a>
+            <button onclick="showModal()" class="login-button"><i class="fas fa-user-circle"></i> Login</button>
         </div>
     </div>
     <div class="menu">
@@ -69,7 +70,7 @@
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="forum.html">Forum</a></li>
             <li><a href="database.html">Szukaj</a></li>
-            <li class="nav-right"><a href="#"><i class="fas fa-user-circle"></i></a></li>
+            <li class="nav-right"><a href="#login" onclick="showModal()" class="login-button"><i class="fas fa-user-circle"></i></a></li>
         </ul>
     </div>
 </body>
