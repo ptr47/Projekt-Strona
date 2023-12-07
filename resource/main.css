@@ -124,6 +124,7 @@ main h3 {
 /* ---------- MODAL CSS ---------- */
 .modal {
   position: fixed;
+  display: flex;
   text-align: center;
   align-items: center;
   z-index: 1;
@@ -139,9 +140,10 @@ main h3 {
 }
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 2rem;
   border: 1px solid #888;
+  border-radius: 12px;
   width: fit-content;
 }
 .close {

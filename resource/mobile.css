@@ -52,6 +52,10 @@
   main {
     padding: 1rem 2rem;
   }
+  .modal-content
+  {
+    margin: 15% auto;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -79,5 +83,9 @@
   }
   .classification {
     text-align: justify;
+  }
+  .modal-content
+  {
+    margin: 25% auto;
   }
 }

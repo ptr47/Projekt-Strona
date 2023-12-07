@@ -38,27 +38,32 @@
     </TYPE>
     <TYPE> <!-- ACTION -->
         <ITEM>
-            <NAME></NAME>
+            <NAME>Zamek swobodny</NAME>
+            <DESC>Najprostszy rodzaj zamka stosowanego w automatycznej broni strzeleckiej. Jego działanie opiera się na sile gazów uwalnianych przy strzale i kompresji sprężyn. Aby przygotować broń do strzału, zamknięty blok zamka trzeba ręcznie przesunąć do tyłu. W trakcie zamykania dolna część bloku zamka wypycha nabój z magazynka i wciska go do komory nabojowej, a pazur wyrzutnika zaczepia o kryzę łuski naboju.</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Zamek półswobodny</NAME>
+            <DESC>Zamek półswobodny działa na podobnej zasadzie jak zamek swobodny.
+                Opiera się na wykorzystaniu energii odrzutu zamka, który podczas strzału nie jest sztywno zaryglowany, a w odróżnieniu od układów z zamkiem swobodnym, specjalne urządzenia mają za zadanie opóźnienie ruchu odrzucanego do tyłu zamka lub jego przedniej części.</DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Zamek dwutaktowy</NAME>
+            <DESC>Stosowany w karabinach powtarzalnych i jednostrzałowych, w którym przy przeładowaniu strzelec musi wykonać dwa ruchy za pomocą manipulatora zamka. Zamki dwutaktowe przeładowywane dźwignią (ang. lever-action), były spopularyzowane w XIX wiecznej Ameryce przez m.in. karabiny dźwigniowe Winchester. </DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Zamek czterotaktowy</NAME>
+            <DESC>Stosowany w karabinach powtarzalnych i jednostrzałowych, w którym przy przeładowaniu strzelec musi wykonać cztery ruchy za pomocą manipulatora zamka. </DESC>
+        </ITEM>
+        <ITEM>
+            <NAME>Zamek łamany</NAME>
             <DESC></DESC>
         </ITEM>
         <ITEM>
-            <NAME></NAME>
+            <NAME>Zamek klinowy</NAME>
             <DESC></DESC>
         </ITEM>
         <ITEM>
-            <NAME></NAME>
-            <DESC></DESC>
-        </ITEM>
-        <ITEM>
-            <NAME></NAME>
-            <DESC></DESC>
-        </ITEM>
-        <ITEM>
-            <NAME></NAME>
-            <DESC></DESC>
-        </ITEM>
-        <ITEM>
-            <NAME></NAME>
+            <NAME>Zamek obrotowy</NAME>
             <DESC></DESC>
         </ITEM>
     </TYPE>
@@ -67,31 +72,36 @@
             <NAME>Broń jednostrzałowa</NAME>
             <DESC>Broń strzelecka nieautomatyczna, w której każdy kolejny nabój jest wprowadzany
                 ręcznie do komory nabojowej (broń nie posiada magazynka). Do tej klasy broni zalicza
-                się broń odprzodową, najstarsze typy broni odtylcowej oraz
-                niektóre wielkokalibrowe karabiny wyborowe.</DESC>
+                się broń odprzodową, najstarsze typy broni odtylcowej oraz niektóre wielkokalibrowe
+                karabiny wyborowe.</DESC>
         </ITEM>
         <ITEM>
             <NAME>Broń powtarzalna</NAME>
             <DESC>Broń strzelecka nieautomatyczna mogąca strzelać wyłącznie ogniem pojedynczym,
-                wyposażona w magazyn amunicyjny, w której wszystkie czynności
-                przeładowania kolejnych nabojów z magazynka amunicyjnego do komory nabojowej
-                wykonuje strzelający za pomocą mechanizmów ręcznego przeładowania</DESC>
+                wyposażona w magazyn amunicyjny, w której wszystkie czynności przeładowania
+                kolejnych nabojów z magazynka amunicyjnego do komory nabojowej wykonuje strzelający
+                za pomocą mechanizmów ręcznego rzeładowania</DESC>
         </ITEM>
         <ITEM>
             <NAME>Broń samopowtarzalna</NAME>
             <DESC>Broń strzelecka automatyczna strzelająca wyłącznie ogniem pojedynczym.
                 Przeładowanie następuje automatycznie aż do czasu opróżnienia magazynka. Aby oddać
-                kolejny strzał, należy zwolnić i ponownie
-                nacisnąć spust. Do broni samopowtarzalnej zalicza się większość pistoletów, a także
-                niektóre strzelby, karabinki oraz karabiny (szczególnie wyborowe).</DESC>
+                kolejny strzał, należy zwolnić i ponownie nacisnąć spust. Do broni samopowtarzalnej
+                zalicza się większość pistoletów, a także niektóre strzelby, karabinki oraz karabiny
+                (szczególnie wyborowe).</DESC>
         </ITEM>
         <ITEM>
             <NAME>Broń samoczynna</NAME>
-            <DESC></DESC>
+            <DESC>Broń strzelecka automatyczna wyposażona w mechanizm spustowy umożliwiający
+                prowadzenie wyłącznie ognia ciągłego. Po naciśnięciu i trzymaniu spustu broń strzela
+                tak długo jak naboje są ładowane do komory.</DESC>
         </ITEM>
         <ITEM>
             <NAME>Broń samoczynno-samopowtarzalna</NAME>
-            <DESC></DESC>
+            <DESC>Broń strzelecka automatyczna wyposażona w mechanizm spustowy umożliwiający
+                prowadzenie ognia pojedynczego i ciągłego. Zmiana rodzaju ognia jest możliwa dzięki
+                przełącznikow. Niektóre modele posiadają ogranicznik długości serii, który pozwala
+                strzelać krótszymi i celniejszymi seriami kilku strzałów.</DESC>
         </ITEM>
     </TYPE>
     <TYPE> <!-- AMMO TYPE -->
