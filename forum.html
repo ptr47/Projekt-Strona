@@ -7,6 +7,7 @@
     <title>Forum</title>
     <link rel="stylesheet" href="resource/main.css" />
     <link rel="stylesheet" href="resource/mobile.css" />
+    <link rel="stylesheet" href="resource/forum.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <script src="https://kit.fontawesome.com/e4a335c558.js" crossorigin="anonymous"></script>
     <script src="scripts/jquery-3.7.1.min.js"></script>
@@ -26,16 +27,80 @@
         <script src="scripts/navbar.js"></script>
         <!--Navbar end-->
         <main>
-            <table>
+            <div class="post-container">
+                <table class="post" onclick="toggleComments(event)">
                     <tr>
-                        <td>a</td>
-                        <td>b</td>
+                        <th class="post-user" rowspan="2">
+                            <table>
+                                <tr>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>01.01.1999 12:00</td>
+                                </tr>
+                            </table>
+                        </th>
+                        <th class="post-title">Test post</th>
                     </tr>
                     <tr>
-                        <td>c</td>
-                        <td>d</td>
+                        <td>To jest testowy post</td>
                     </tr>
-            </table>
+                </table>
+                <table class="comment">
+                    <tr>
+                        <td style="width: 10%;">Admin</td>
+                        <td style="width: 20%;">01.01.1999 12:00</td>
+                        <td>To jest komentarz</td>
+                    </tr>
+                </table>
+                <table class="comment">
+                    <tr>
+                        <td style="width: 10%;">Admin</td>
+                        <td style="width: 20%;">01.01.1999 12:00</td>
+                        <td>To jest komentarz</td>
+                    </tr>
+                </table>
+                <table class="comment">
+                    <tr>
+                        <td style="width: 10%;">Admin</td>
+                        <td style="width: 20%;">01.01.1999 12:00</td>
+                        <td>To jest komentarz</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="post-container">
+                <table class="post" onclick="toggleComments(event)">
+                    <tr>
+                        <th class="post-user" rowspan="2">
+                            <table>
+                                <tr>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>01.01.1999 13:00</td>
+                                </tr>
+                            </table>
+                        </th>
+                        <th class="post-title">Test post 2</th>
+                    </tr>
+                    <td>To jest testowy post numer 2</td>
+                    </tr>
+                </table>
+                <table class="comment">
+                    <tr>
+                        <td style="width: 10%;">Admin</td>
+                        <td style="width: 20%;">01.01.1999 12:00</td>
+                        <td>To jest komentarz</td>
+                    </tr>
+                </table>
+                <table class="comment">
+                    <tr>
+                        <td style="width: 10%;">Admin</td>
+                        <td style="width: 20%;">01.01.1999 12:00</td>
+                        <td>To jest komentarz</td>
+                    </tr>
+                </table>
+            </div>
         </main>
         <footer>&copy; Piotr Kurdziel</footer>
     </div>
@@ -43,6 +108,7 @@
     <script src="scripts/responsive.js"></script>
     <script src="scripts/dropdownMenu.js"></script>
     <script src="scripts/modal-login.js"></script>
+    <script src="scripts/comment.js"></script>
     <!--End of scripts-->
 </body>
 
