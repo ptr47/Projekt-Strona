@@ -14,16 +14,16 @@
 	<div class="panels">
 		<div id="login-panel">
 			<form action="login.php" method="POST">
-				<input type="text" name="login" placeholder="Login"> <br>
-				<input type="password" name="password" placeholder="Hasło"> <br>
+				<input type="text" name="login" placeholder="Login" required> <br>
+				<input type="password" name="password" placeholder="Hasło" required> <br>
 				<input type="submit" value="Zaloguj">
 			</form>
 		</div>
 		<div id="register-panel">
 			<form action="register.php" method="POST">
-				<input type="text" name="login" placeholder="Login"> <br>
-				<input type="password" name="password" placeholder="Hasło"> <br>
-				<input type="password" name="password_repeat" placeholder="Powtórz hasło"> <br>
+				<input type="text" name="login" placeholder="Login" required> <br>
+				<input type="password" name="password" placeholder="Hasło" required> <br>
+				<input type="password" name="password_repeat" placeholder="Powtórz hasło" required> <br>
 				<input type="submit" value="Zarejestruj">
 			</form>
 		</div>
@@ -31,4 +31,7 @@
 	<br>
 	<span>Nie masz konta? </span>
 	<button id="change-logreg-button" onclick="changeLogin()">Zarejestruj się</button>
+	<script>
+		$(':submit').css({"border":"none","border-radius":"8px","padding":"0.3rem","cursor":"pointer","background-color":"#95b2d4"});
+	</script>
 </body>

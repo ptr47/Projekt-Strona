@@ -39,32 +39,39 @@
     <TYPE> <!-- ACTION -->
         <ITEM>
             <NAME>Zamek swobodny</NAME>
-            <DESC>Najprostszy rodzaj zamka stosowanego w automatycznej broni strzeleckiej. Jego działanie opiera się na sile gazów uwalnianych przy strzale i kompresji sprężyn. Aby przygotować broń do strzału, zamknięty blok zamka trzeba ręcznie przesunąć do tyłu. W trakcie zamykania dolna część bloku zamka wypycha nabój z magazynka i wciska go do komory nabojowej, a pazur wyrzutnika zaczepia o kryzę łuski naboju.</DESC>
+            <DESC>Najprostszy rodzaj zamka stosowanego w automatycznej broni strzeleckiej. Jego
+                działanie opiera się na sile gazów uwalnianych przy strzale i kompresji sprężyn. Aby
+                przygotować broń do strzału, zamknięty blok zamka trzeba ręcznie przesunąć do tyłu.
+                W trakcie zamykania dolna część bloku zamka wypycha nabój z magazynka i wciska go do
+                komory nabojowej, a pazur wyrzutnika zaczepia o kryzę łuski naboju.</DESC>
         </ITEM>
         <ITEM>
             <NAME>Zamek półswobodny</NAME>
             <DESC>Zamek półswobodny działa na podobnej zasadzie jak zamek swobodny.
-                Opiera się na wykorzystaniu energii odrzutu zamka, który podczas strzału nie jest sztywno zaryglowany, a w odróżnieniu od układów z zamkiem swobodnym, specjalne urządzenia mają za zadanie opóźnienie ruchu odrzucanego do tyłu zamka lub jego przedniej części.</DESC>
+                Opiera się na wykorzystaniu energii odrzutu zamka, który podczas strzału nie jest
+                sztywno zaryglowany, a w odróżnieniu od układów z zamkiem swobodnym, specjalne
+                urządzenia mają za zadanie opóźnienie ruchu odrzucanego do tyłu zamka lub jego
+                przedniej części.</DESC>
         </ITEM>
         <ITEM>
             <NAME>Zamek dwutaktowy</NAME>
-            <DESC>Stosowany w karabinach powtarzalnych i jednostrzałowych, w którym przy przeładowaniu strzelec musi wykonać dwa ruchy za pomocą manipulatora zamka. Zamki dwutaktowe przeładowywane dźwignią (ang. lever-action), były spopularyzowane w XIX wiecznej Ameryce przez m.in. karabiny dźwigniowe Winchester. </DESC>
+            <DESC>Stosowany w karabinach powtarzalnych i jednostrzałowych, w którym przy
+                przeładowaniu strzelec musi wykonać dwa ruchy za pomocą manipulatora zamka. Zamki
+                dwutaktowe przeładowywane dźwignią (ang. lever-action), były spopularyzowane w XIX
+                wiecznej Ameryce przez m.in. karabiny dźwigniowe Winchester. </DESC>
         </ITEM>
         <ITEM>
             <NAME>Zamek czterotaktowy</NAME>
-            <DESC>Stosowany w karabinach powtarzalnych i jednostrzałowych, w którym przy przeładowaniu strzelec musi wykonać cztery ruchy za pomocą manipulatora zamka. </DESC>
+            <DESC>Stosowany w karabinach powtarzalnych i jednostrzałowych, w którym przy
+                przeładowaniu strzelec musi wykonać cztery ruchy za pomocą manipulatora zamka. </DESC>
         </ITEM>
         <ITEM>
-            <NAME>Zamek łamany</NAME>
-            <DESC></DESC>
-        </ITEM>
-        <ITEM>
-            <NAME>Zamek klinowy</NAME>
-            <DESC></DESC>
-        </ITEM>
-        <ITEM>
-            <NAME>Zamek obrotowy</NAME>
-            <DESC></DESC>
+            <NAME>Zamek o konstrukcji łamanej</NAME>
+            <DESC>W przypadku broni łamanej strzelec może ręcznie odchylić zamknięty blok zamka,
+                odsłaniając komorę nabojową. Po wkładaniu amunicji zamknięcie jest przywracane do
+                pozycji pierwotnej. Konstrukcja łamana jest często stosowana w dubeltówkach,
+                rewolwerach
+                łamanych i niektórych karabinach. </DESC>
         </ITEM>
     </TYPE>
     <TYPE> <!-- FIREMODE -->
@@ -107,23 +114,41 @@
     <TYPE> <!-- AMMO TYPE -->
         <ITEM>
             <NAME>Amunicja pistoletowa</NAME>
-            <DESC></DESC>
+            <DESC>Rodzaj amunicji zespolonej, przeznaczonej do zasilania pistoletów i pistoletów
+                maszynowych.
+                Większość naboi pistoletowych ma łuski cylindryczne, rzadziej stosowane są łuski
+                butelkowe. Typowe naboje pistoletowe mają łuski z kryzą niewystającą zwaną wtokiem.
+                Najbardziej popularnym jest nab 9x19mm Parabellum</DESC>
         </ITEM>
         <ITEM>
             <NAME>Amunicja rewolwerowa</NAME>
-            <DESC></DESC>
+            <DESC>Rodzaj amunicji zespolonej przeznaczonej do zasilania rewolwerów. Pierwsze naboje
+                zespolone wprowadzono w rewolwerach systemu Lefaucheux w 1853.
+                Późniejsze naboje rewolwerowe mają już centralnie umieszczoną spłonkę w dnie łuski.
+                Łuski amunicji rewolwerowej z kryzą wystającą nie posiadają szyjki i mają jednakową
+                średnicę na całej długości. Najbardziej popularnym jest .44 Magnum.</DESC>
         </ITEM>
         <ITEM>
             <NAME>Amunicja pośrednia</NAME>
-            <DESC></DESC>
+            <DESC>Rodzaj amunicji zespolonej, zapewnia energię wylotową pocisku wyższą od amunicji
+                pistoletowej, ale niższą od amunicji karabinowej. Najczęściej używana przez
+                żołnierzy, ze względu na mniejszy odrzut i rozmiar, co czyni z niej bardziej
+                kompaktową i prostszą w opanowaniu od amunicji karabinowej. Najbardziej popularnym
+                jest 5.56x45mm NATO</DESC>
         </ITEM>
         <ITEM>
             <NAME>Amunicja karabinowa</NAME>
-            <DESC></DESC>
+            <DESC>Rodzaj amunicji zespolonej przeznaczonej do zasilania karabinów. Kaliber pocisków
+                amunicji karabinowej waha się zazwyczaj w przedziale od 6 do 13 mm. Cechą
+                charakterystyczną tego typu amunicji jest osiąganie przez jej pociski wysokiej
+                energii i prędkości początkowej, ale też posiadanie dużego odrzutu. Najbardziej popularny nabój z tej kategorii to 7.62x51 NATO</DESC>
         </ITEM>
         <ITEM>
             <NAME>Amunicja śrutowa</NAME>
-            <DESC></DESC>
+            <DESC>Rodzaj amunicji przeznaczony do gładkolufowych strzelb. Składa się z łuski, prochu
+                i śrutu, czyli małych metalowych kulek. Ich ilość zależna jest od kalibru i długości
+                łuski. Jest powszechnie wykorzystywana do polowań na ptaki i drobną zwierzynę, ze
+                względu na spory rozrzut. Najbardziej popularnym jest 12ga</DESC>
         </ITEM>
     </TYPE>
 </CLASSIFICATION>

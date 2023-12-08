@@ -145,6 +145,7 @@ main h3 {
   border: 1px solid #888;
   border-radius: 12px;
   width: fit-content;
+  box-shadow: 0 8px 12px rgb(49, 49, 49);
 }
 .close {
   color: #aaaaaa;
