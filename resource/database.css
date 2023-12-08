@@ -71,6 +71,12 @@
   height: auto;
   margin: auto;
 }
+#db-tile {
+  display: none;
+}
+#tile-content img {
+  max-width: 50%;
+}
 @media (max-width: 768px) {
   .sort {
     margin: 0;

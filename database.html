@@ -11,9 +11,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <script src="https://kit.fontawesome.com/e4a335c558.js" crossorigin="anonymous"></script>
   <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script>
+    var modal = document.getElementById("db-tile");
+    
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+  </script>
 </head>
 
-<body>
+<body >
   <div class="container">
     <!--Navbar begin-->
     <header id="include-navbar">
@@ -22,6 +31,11 @@
     <div class="modal" id="login-modal">
       <div class="modal-content" id="include-login">
         <!-- login_modal.html -->
+      </div>
+    </div>
+    <div class="modal" id="db-tile">
+      <div class="modal-content" id="tile-content">
+
       </div>
     </div>
     <script src="scripts/navbar.js"></script>
@@ -69,31 +83,31 @@
       <!-- TODO: dynamically create tiles from db  -->
       <!-- CONTAINER WEAPONS -->
       <div class="tile-container" id="container-weapons">
-        <div class="tile">
+        <div class="tile" onclick="tileShow(event)">
           <img src="img/guns/Ak74.png" alt="AK-74">
           <p class="tile-name">AK-74</p>
           <p class="tile-type">karabinek</p>
           <p class="tile-id">0</p>
         </div>
-        <div class="tile">
+        <div class="tile" onclick="tileShow(event)">
           <img src="img/guns/RPK.jpg" alt="RPK">
           <p class="tile-name">RPK</p>
           <p class="tile-type">karabinek</p>
           <p class="tile-id">2</p>
         </div>
-        <div class="tile">
+        <div class="tile" onclick="tileShow(event)">
           <img src="img/guns/M16A2.jpg" alt="M16A2">
           <p class="tile-name">M16A2</p>
           <p class="tile-type">karabinek</p>
           <p class="tile-id">4</p>
         </div>
-        <div class="tile">
+        <div class="tile" onclick="tileShow(event)">
           <img src="img/guns/M1918A2BAR.webp" alt="M1918A2 BAR">
           <p class="tile-name">M1918A2 BAR</p>
           <p class="tile-type">karabin</p>
           <p class="tile-id">6</p>
         </div>
-        <div class="tile">
+        <div class="tile" onclick="tileShow(event)">
           <img src="img/guns/M1Garand.webp" alt="M1 Garand">
           <p class="tile-name">M1 Garand</p>
           <p class="tile-type">karabin</p>
@@ -102,13 +116,13 @@
       </div>
       <!-- CONTAINER AMMO -->
       <div class="tile-container" id="container-ammo">
-        <div class="tile">
+        <div class="tile" onclick="tileShow(event)">
           <img src="img/ammo/9x19.jpg" alt="9x19mm Parabellum">
           <p class="tile-name">9x19mm Parabellum</p>
           <p class="tile-type">pistoletowa</p>
           <p class="tile-id">1</p>
         </div>
-        <div class="tile">
+        <div class="tile" onclick="tileShow(event)">
           <img src="img/ammo/556x45.jpg" alt="5.56x45mm NATO">
           <p class="tile-name">5.56x45mm NATO</p>
           <p class="tile-type">pośrednia</p>
