@@ -1,3 +1,4 @@
+
 function toggleComments(event) {
     var comments = event.target.offsetParent.parentNode.getElementsByClassName("comment");
     for (let index = 0; index < comments.length; index++) {

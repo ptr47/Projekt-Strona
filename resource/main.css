@@ -86,6 +86,7 @@ footer {
 .block-image {
   font-size: smaller;
   text-align: center;
+  width: 200%;
 }
 .block-image img {
   height: auto;
@@ -161,3 +162,7 @@ main h3 {
   cursor: pointer;
 }
 /* ---------- MODAL CSS ---------- */
+.contact {
+  text-align: center;
+  padding: 2rem;
+}
