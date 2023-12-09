@@ -13,19 +13,16 @@
 </head>
 
 <body>
-
+  <div class="modal" id="login-modal">
+    <div class="modal-content" id="include-login">
+      <!-- login_modal.html -->
+    </div>
+  </div>
 
   <div class="container">
-    <!--Navbar begin-->
-    <header id="include-navbar">
+    <header>
       <!-- navbar.html -->
     </header>
-    <div class="modal" id="login-modal">
-      <div class="modal-content" id="include-login">
-        <!-- login_modal.html -->
-      </div>
-    </div>
-    <!--Navbar end-->
     <main>Witaj użytkowniku! <br>
       <a onclick="showModal()" href="#login">Zaloguj się</a> dla pełni doświadczeń. <br><br>
       Przewodnik: <br>
@@ -44,15 +41,18 @@
         <form action="#" id="contact-form">
           <input type="text" name="title" id="contact-title" placeholder="Tytuł wiadomości"><br>
         </form>
-        <textarea form="contact-form" name="comment" id="contact-text" placeholder="Wpisz swoją wiadomość" style="resize: none;"></textarea><br>  
-        <input form="contact-form" type="button" value="Wyślij wiadomość" onclick="alert('Twoja wiadomość nie została wysłana: Error 420') ">
+        <textarea form="contact-form" name="comment" id="contact-text" placeholder="Wpisz swoją wiadomość"
+          style="resize: none;"></textarea><br>
+        <input form="contact-form" type="button" value="Wyślij wiadomość"
+          onclick="alert('Twoja wiadomość nie została wysłana: Error 420') ">
       </div>
     </main>
-    <footer>&copy; Piotr Kurdziel</footer>
+    <footer>
+      <!-- footer.html -->
+    </footer>
   </div>
   <!--Scripts below-->
-  <script src="scripts/navbar.js"></script>
-  <script src="scripts/responsive.js"></script>
+  <script src="scripts/load.js"></script>
   <script src="scripts/dropdownMenu.js"></script>
   <script src="scripts/modal-login.js"></script>
   <!--End of scripts-->

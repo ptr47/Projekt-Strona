@@ -13,33 +13,26 @@
   <script src="scripts/jquery-3.7.1.min.js"></script>
   <script>
     var modal = document.getElementById("db-tile");
-    
+
     window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
   </script>
 </head>
 
-<body >
+<body>
+  <div class="modal" id="login-modal">
+    <div class="modal-content" id="include-login">
+      <!-- login_modal.html -->
+    </div>
+  </div>
+
   <div class="container">
-    <!--Navbar begin-->
-    <header id="include-navbar">
+    <header>
       <!-- navbar.html -->
     </header>
-    <div class="modal" id="login-modal">
-      <div class="modal-content" id="include-login">
-        <!-- login_modal.html -->
-      </div>
-    </div>
-    <div class="modal" id="db-tile">
-      <div class="modal-content" id="tile-content">
-
-      </div>
-    </div>
-    <script src="scripts/navbar.js"></script>
-    <!--Navbar end-->
     <main>
       <!-- FILTER SYSTEM -->
       <div class="sort">
@@ -130,10 +123,12 @@
         </div>
       </div>
     </main>
-    <footer>&copy; Piotr Kurdziel</footer>
+    <footer>
+      <!-- footer.html -->
+    </footer>
   </div>
   <!--Scripts below-->
-  <script src="scripts/responsive.js"></script>
+  <script src="scripts/load.js"></script>
   <script src="scripts/dropdownMenu.js"></script>
   <script src="scripts/db-filter.js"></script>
   <script src="scripts/db-tile.js"></script>
