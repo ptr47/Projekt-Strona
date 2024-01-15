@@ -70,7 +70,7 @@
             <li><a href="quiz.php">Quiz</a></li>
             <li><a href="forum.php">Forum</a></li>
             <li><a href="database.php">Szukaj</a></li>
-            <li class="nav-right"><a href="#login" onclick="showModal()" class="login-button"><i class="fas fa-user-circle"></i></a></li>
+            <li class="nav-right"><a href="login_page.php" onclick="showModal()" class="login-button"><i class="fas fa-user-circle"></i></a></li>
         </ul>
     </div>
 </body>

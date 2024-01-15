@@ -2,7 +2,12 @@
 <html lang="pl">
 
 <?php
-include("connect.php");
+include("session.php");
+
+if (!isset($_SESSION['login'])) {
+    header("location: login_page.php");
+    die();
+}
 ?>
 
 <head>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
-  
+
 <?php
-include("connect.php");
+include("session.php");
 ?>
 
 <head>

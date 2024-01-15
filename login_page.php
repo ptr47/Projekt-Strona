@@ -1,5 +1,14 @@
+<!DOCTYPE html>
+<html lang="pl">
+
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Logowanie</title>
 	<style>
+		body{
+			text-align: center;
+		}
 		.panels input {
 			padding: 0.5rem;
 			font-size: large;
@@ -7,7 +16,8 @@
 			outline: none;
 		}
 
-		.panels .btn, #change-logreg-button {
+		.panels .btn,
+		#change-logreg-button {
 			border: none;
 			border-radius: 8px;
 			padding: 0.3rem;
@@ -36,8 +46,7 @@
 			</form>
 		</div>
 	</div>
-	<br>
-	<span>Nie masz konta? </span>
-	<button id="change-logreg-button" onclick="changeLogin()">Zarejestruj się</button>
 
 </body>
+
+</html>

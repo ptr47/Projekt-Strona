@@ -2,7 +2,7 @@
 <html lang="pl">
 
 <?php
-include("connect.php");
+include("session.php");
 ?>
 
 <head>
@@ -27,8 +27,19 @@ include("connect.php");
     <header>
       <!-- navbar.html -->
     </header>
-    <main>Witaj użytkowniku! <br>
-      <a onclick="showModal()" href="#login">Zaloguj się</a> dla pełni doświadczeń. <br><br>
+    <main>
+      <?php
+      if (!isset($_SESSION['login'])) {
+        echo 'Witaj użytkowniku <br>';
+        echo '<a href="login_page.php">Zaloguj się</a> dla pełni doświadczeń. <br>';
+      }
+      else {
+        echo 'Witaj <b>';
+        echo $_SESSION['login'];
+        echo '</b><br>';
+      }
+      ?>
+      <br>
       Przewodnik: <br>
       <a href="index.html">Strona główna</a> - Tutaj jesteś<br>
       <a href="history.html">Historia</a> - Poznaj historię broni od prymitywnych rusznic po rewolwery i karabiny
