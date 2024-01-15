@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
+  
+<?php
+include("connect.php");
+?>
 
 <head>
   <meta charset="UTF-8" />
