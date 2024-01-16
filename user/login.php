@@ -17,4 +17,3 @@ if ($count == 1) {
     header("location: login.php?error=1");
 }
 $result->free_result();
-?>
