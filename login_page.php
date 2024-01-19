@@ -41,14 +41,14 @@
 				<input type="password" name="password" placeholder="Hasło" required> <br>
 				<input class="btn" type="submit" value="Zaloguj">
 			</form>
-		</div>
-		<div class="error">
-			<?php
-			$error = $_GET["error"] ?? null;
-			if ($error == 1) {
-				echo "Login lub hasło są nieprawidłowe";
-			}
-			?>
+			<div class="error">
+				<?php
+				$error = $_GET["error"] ?? null;
+				if ($error == 1) {
+					echo "Login lub hasło są nieprawidłowe";
+				}
+				?>
+			</div>
 		</div>
 		<br>
 		<div id="register-panel">
@@ -58,6 +58,17 @@
 				<input type="password" name="password_repeat" placeholder="Powtórz hasło" required> <br>
 				<input class="btn" type="submit" value="Zarejestruj">
 			</form>
+			<div class="error">
+				<?php
+				$error = $_GET["error"] ?? null;
+				if ($error == 2) {
+					echo "Użytkownik o podanej nazwie już istnieje";
+				}
+				if ($error == 3) {
+					echo "Hasła się nie zgadzają";
+				}
+				?>
+			</div>
 		</div>
 		<a href="index.php">Wróć</a>
 	</div>
