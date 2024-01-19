@@ -14,6 +14,6 @@ if ($count == 1) {
     $_SESSION['login'] = $login;
     header("location: ../index.php");
 } else {
-    header("location: login.php?error=1");
+    header("location: ../login_page.php?error=1");
 }
 $result->free_result();

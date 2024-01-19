@@ -1,4 +1,7 @@
 <html>
+<?php
+include("../session.php");
+?>
 <style>
     .menu {
         width: 100%;
@@ -45,10 +48,12 @@
         }
     }
 </style>
+
 <head>
-  <script src="https://kit.fontawesome.com/e4a335c558.js" crossorigin="anonymous"></script>
-  
+    <script src="https://kit.fontawesome.com/e4a335c558.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
     <div id="hamburgerMenu" class="hamburger-menu">
         <button onclick="showDropdown()" class="m-dropbtn">Menu</button>
@@ -70,7 +75,16 @@
             <li><a href="quiz.php">Quiz</a></li>
             <li><a href="forum.php">Forum</a></li>
             <li><a href="database.php">Szukaj</a></li>
-            <li class="nav-right"><a href="login_page.php" onclick="showModal()" class="login-button"><i class="fas fa-user-circle"></i></a></li>
+            <li class="nav-right">
+                <?php
+                if (!isset($_SESSION['login'])) {
+                    echo '<a href="login_page.php" class="login-button"><i class="fas fa-user-circle"></i></a>';
+                } else {
+                    echo '<a href="#" onclick="showModal()" class="login-button"><i class="fas fa-user-circle"></i></a>';
+                }
+                ?>
+
+            </li>
         </ul>
     </div>
 </body>

@@ -6,9 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Logowanie</title>
 	<style>
-		body{
+		body {
 			text-align: center;
 		}
+
 		.panels input {
 			padding: 0.5rem;
 			font-size: large;
@@ -24,6 +25,10 @@
 			cursor: pointer;
 			background-color: #95b2d4;
 		}
+
+		.error {
+			color: red;
+		}
 	</style>
 </head>
 
@@ -37,6 +42,15 @@
 				<input class="btn" type="submit" value="Zaloguj">
 			</form>
 		</div>
+		<div class="error">
+			<?php
+			$error = $_GET["error"] ?? null;
+			if ($error == 1) {
+				echo "Login lub hasło są nieprawidłowe";
+			}
+			?>
+		</div>
+		<br>
 		<div id="register-panel">
 			<form action="user/register.php" method="POST">
 				<input type="text" name="login" placeholder="Login" required> <br>
@@ -45,6 +59,7 @@
 				<input class="btn" type="submit" value="Zarejestruj">
 			</form>
 		</div>
+		<a href="index.php">Wróć</a>
 	</div>
 
 </body>
