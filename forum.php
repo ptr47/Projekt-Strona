@@ -34,7 +34,76 @@ if (!isset($_SESSION['login'])) {
             <!-- navbar.html -->
         </header>
         <main>
-            <div class="post-container">
+            <div id="addpost">
+                <form action="process_post.php" method="post">
+                    Tytuł<br>
+                    <input type="text" id="title" name="title" required><br>
+                    Treść<br>
+                    <textarea id="content" name="content" required></textarea><br>
+
+                    <input type="submit" value="Zamieść">
+                </form>
+            </div>
+            <?php
+            $postQuery = "SELECT * FROM posts";
+            $postSql = $connection->query($postQuery);
+
+            while ($post = $postSql->fetch_assoc()) {
+                $postId = $post['id'];
+                $commentResult = $connection->query("SELECT * FROM comments WHERE post_id = $postId");
+                $username = $post['user_id'];
+                $userResult = $connection->query("SELECT user FROM users WHERE id= $username");
+                $username = "Deleted";
+                if ($userResult) {
+                    $userData = $userResult->fetch_row();
+                    if ($userData)
+                        $username = $userData[0];
+                }
+                echo '<div class="post-container">';
+                echo '<table class="post" onclick="toggleComments(event)">
+                <tr>
+                    <th class="post-user" rowspan="2">
+                    <table>
+                        <tr><td>' . $username . '</td></tr>
+                        <tr><td>' . $post['data'] . '</td></tr>
+                    </table>
+                    </th>
+                    <th class="post-title">' . $post['title'] . '</th>
+                </tr>
+                <tr><td colspan="2"><p>' . $post['tresc'] . '</p></td></tr>
+                </table>';
+
+                echo '<div class="comments">';
+                while ($comment = $commentResult->fetch_assoc()) {
+                    $username = $comment['user_id'];
+                    $userResult = $connection->query("SELECT user FROM users WHERE id= $username");
+                    $username = "Deleted";
+                    if ($userResult) {
+                        $userData = $userResult->fetch_row();
+                        if ($userData)
+                            $username = $userData[0];
+                    }
+                    echo '<table class="comment">
+                    <tr>
+                        <td style="width: 10%;">' . $username . '</td>
+                        <td style="width: 20%;">' . $comment['data'] . '</td>
+                        <td>' . $comment['tresc'] . '</td>
+                    </tr>
+                    </table>';
+                }
+                echo
+                    '<div class="addcomment">
+                        <form action="process_comm.php" method="post">
+                            <input type="hidden" name="post" value="' . $postId . '">
+                            <input type="text" name="content" required>
+                            <input type="submit" value="Dodaj komentarz">
+                        </form>
+                    </div>
+                </div>
+                </div>';
+            }
+            ?>
+            <!-- <div class="post-container">
                 <table class="post" onclick="toggleComments(event)">
                     <tr>
                         <th class="post-user" rowspan="2">
@@ -108,7 +177,7 @@ if (!isset($_SESSION['login'])) {
                         <td>To jest komentarz</td>
                     </tr>
                 </table>
-            </div>
+            </div> -->
         </main>
         <footer>
             <!-- footer.html -->
@@ -118,7 +187,7 @@ if (!isset($_SESSION['login'])) {
     <script src="scripts/load.js"></script>
     <script src="scripts/dropdownMenu.js"></script>
     <script src="scripts/modal-login.js"></script>
-    <script src="scripts/comment.js"></script>
+    <!--<script src="scripts/comment.js"></script>-->
     <!--End of scripts-->
 </body>
 

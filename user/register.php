@@ -8,8 +8,8 @@ $password = $_POST['password'];
 $password_repeat = $_POST['password_repeat'];
 
 $sql = "SELECT * FROM uzytkownicy WHERE user='$login'";
-$result = mysqli_query($polaczenie, $sql);
-$count = $result->num_rows;
+$postSql = mysqli_query($polaczenie, $sql);
+$count = $postSql->num_rows;
 if (!$count == 0) {
     header("location: register.php?error=2");
 } else {
