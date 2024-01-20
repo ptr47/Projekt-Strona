@@ -6,13 +6,13 @@ session_start();
 $login = $_POST['login'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM users WHERE user='$login' AND pass='$password'";
+$query = "SELECT * FROM users WHERE user='$login' AND pass='$password'";
 
-$postSql = mysqli_query($connection, $sql);
-if ($postSql->num_rows == 1) {
+$result = mysqli_query($connection, $query);
+if ($result->num_rows == 1) {
     $_SESSION['login'] = $login;
     header("location: ../index.php");
 } else {
     header("location: ../login_page.php?error=1");
 }
-$postSql->free_result();
+$result->free_result();

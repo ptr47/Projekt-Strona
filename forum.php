@@ -46,9 +46,9 @@ if (!isset($_SESSION['login'])) {
             </div>
             <?php
             $postQuery = "SELECT * FROM posts";
-            $postSql = $connection->query($postQuery);
+            $result = $connection->query($postQuery);
 
-            while ($post = $postSql->fetch_assoc()) {
+            while ($post = $result->fetch_assoc()) {
                 $postId = $post['id'];
                 $commentResult = $connection->query("SELECT * FROM comments WHERE post_id = $postId");
                 $username = $post['user_id'];
@@ -72,7 +72,7 @@ if (!isset($_SESSION['login'])) {
                 </tr>
                 <tr><td colspan="2"><p>' . $post['tresc'] . '</p></td></tr>
                 </table>';
-
+                $userResult->free_result();
                 echo '<div class="comments">';
                 while ($comment = $commentResult->fetch_assoc()) {
                     $username = $comment['user_id'];
@@ -90,6 +90,7 @@ if (!isset($_SESSION['login'])) {
                         <td>' . $comment['tresc'] . '</td>
                     </tr>
                     </table>';
+                    $userResult->free_result();
                 }
                 echo
                     '<div class="addcomment">
@@ -102,6 +103,7 @@ if (!isset($_SESSION['login'])) {
                 </div>
                 </div>';
             }
+            $result->free_result();
             ?>
             <!-- <div class="post-container">
                 <table class="post" onclick="toggleComments(event)">
