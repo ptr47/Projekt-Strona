@@ -12,11 +12,3 @@ $(function () {
 function showModal() {
     document.getElementById("login-modal").style.display = "block";
 }
-
-function addPost() {
-
-}
-
-function addComment() {
-    
-}
