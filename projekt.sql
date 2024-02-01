@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 29, 2024 at 02:40 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: localhost
+-- Generation Time: Feb 01, 2024 at 01:25 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,7 +44,9 @@ INSERT INTO `comments` (`id`, `post_id`, `user_id`, `data`, `tresc`) VALUES
 (3, 1, 1, '2024-01-20 00:05:59', 'drugi komentarz (dodany ze strony)'),
 (4, 5, 1, '2024-01-20 00:06:10', 'random comment moment'),
 (5, 8, 3, '2024-01-20 11:38:17', 'ok'),
-(6, 9, 1, '2024-01-29 12:20:07', 'komentarz');
+(6, 9, 1, '2024-01-29 12:20:07', 'komentarz'),
+(7, 1, 1, '2024-01-31 21:42:32', 'b'),
+(8, 5, 1, '2024-01-31 21:42:59', 'fg');
 
 -- --------------------------------------------------------
 
@@ -83,18 +85,24 @@ INSERT INTO `posts` (`id`, `user_id`, `data`, `tresc`, `title`) VALUES
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `user` text NOT NULL,
-  `pass` text NOT NULL
+  `pass` text NOT NULL,
+  `pfp` text DEFAULT NULL COMMENT 'path to profile picture',
+  `birthdate` date DEFAULT NULL,
+  `newsletter` binary(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user`, `pass`) VALUES
-(1, 'admin', 'admin'),
-(2, 'user', 'user'),
-(3, 'asia', 'asia'),
-(8, 'user5', 'hasło');
+INSERT INTO `users` (`id`, `user`, `pass`, `pfp`, `birthdate`, `newsletter`) VALUES
+(1, 'admin', 'admin', NULL, '1900-01-01', 0x30),
+(2, 'user', 'user', NULL, NULL, 0x30),
+(3, 'asia', 'asia', NULL, NULL, 0x30),
+(8, 'user5', 'hasło', NULL, NULL, 0x30),
+(9, 'a', 'd', NULL, NULL, 0x31),
+(10, '243', '432', NULL, NULL, 0x31),
+(11, '65', '65', NULL, NULL, 0x30);
 
 --
 -- Indexes for dumped tables
@@ -129,7 +137,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `posts`
@@ -141,7 +149,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
