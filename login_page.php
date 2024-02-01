@@ -56,6 +56,7 @@
 				<input type="text" name="login" placeholder="Login" required> <br>
 				<input type="password" name="password" placeholder="Hasło" required> <br>
 				<input type="password" name="password_repeat" placeholder="Powtórz hasło" required> <br>
+				<input type="checkbox" name="newsletter" checked> Sign up for the newsletter? <br>
 				<input class="btn" type="submit" value="Zarejestruj">
 			</form>
 			<div class="error">

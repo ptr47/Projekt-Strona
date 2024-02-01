@@ -60,7 +60,7 @@ if (!isset($_SESSION['login'])) {
                         $username = $userData[0];
                 }
                 echo '<div class="post-container">';
-                echo '<table class="post" onclick="toggleComments(event)">
+                echo '<table class="post">
                 <tr>
                     <th class="post-user" rowspan="2">
                     <table>
@@ -87,8 +87,11 @@ if (!isset($_SESSION['login'])) {
                     <tr>
                         <td style="width: 10%;">' . $username . '</td>
                         <td style="width: 20%;">' . $comment['data'] . '</td>
-                        <td>' . $comment['tresc'] . '</td>
-                    </tr>
+                        <td>' . $comment['tresc'] . '</td>';
+                        if ($_SESSION['login'] == 'admin') {
+                        echo '<td style="width: 5%;"><button class="delete-button">Usuń</button></td>';
+                        }
+                    echo '</tr>
                     </table>';
                     $userResult->free_result();
                 }

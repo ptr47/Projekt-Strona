@@ -43,3 +43,19 @@ table {
     margin: 0.25rem 1rem;
     padding-bottom: 0.25rem;
 }
+.delete-button {
+  background-color: #f44336; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  padding: 5px 10px; /* Wielkość wewnętrznych marginesów */
+  border: none; /* Brak obramowania */
+  border-radius: 4px; /* Zaokrąglenie rogów */
+  cursor: pointer; /* Zmiana kursora po najechaniu */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  text-decoration: none; /* Brak podkreślenia tekstu */
+  display: inline-block; /* Element jest blokiem, ale dopasowuje się do treści */
+  transition: background-color 0.3s; /* Płynne przejście koloru tła */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Kolor tła po najechaniu */
+}

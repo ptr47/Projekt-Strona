@@ -5,8 +5,8 @@
 include("session.php");
 
 if (!isset($_SESSION['login'])) {
-    header("location: index.php");
-    die();
+  header("location: index.php");
+  die();
 }
 ?>
 
@@ -19,6 +19,14 @@ if (!isset($_SESSION['login'])) {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <script src="https://kit.fontawesome.com/e4a335c558.js" crossorigin="anonymous"></script>
   <script src="scripts/jquery-3.7.1.min.js"></script>
+  <style>
+    #edit-data {
+      text-align: center;
+    }
+    #edit-data>img {
+      height: 5rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -33,7 +41,18 @@ if (!isset($_SESSION['login'])) {
       <!-- navbar.html -->
     </header>
     <main>
-
+      <form id="edit-data" action="user/edit_data.php" method="post" enctype="multipart/form-data">
+        <?php echo '<img src="'.$_SESSION['pfp'].'"/><br><br><br>'; ?>
+        Zmień obrazek:
+        <input type="file" id="pfp" name="pfp" accept="image/jpeg, image/png, image/gif"><br><br>
+        Data urodzenia:
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+        Zmień hasło: 
+        <input type="text" id="password" name="password"><br><br>
+        Zmień email:
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Zapisz">
+      </form>
     </main>
     <footer>
       <!-- footer.html -->

@@ -40,7 +40,9 @@ include("../session.php");
     .nav-right {
         float: right;
     }
-
+    .nav-right img {
+        height: 1rem;
+    }
     @media(max-width: 768px) {
 
         .menu {
@@ -64,7 +66,7 @@ include("../session.php");
             <a href="quiz.php">Quiz</a>
             <a href="forum.php">Forum</a>
             <a href="database.php">Szukaj</a>
-            <button onclick="showModal()" class="login-button"><i class="fas fa-user-circle"></i> Login</button>
+            <button onclick="showModal()" class="login-button"><img src="img/pfp/default-pfp.png"/> Login</button>
         </div>
     </div>
     <div class="menu">
@@ -80,7 +82,7 @@ include("../session.php");
                 if (!isset($_SESSION['login'])) {
                     echo '<a href="login_page.php" class="login-button"><i class="fas fa-user-circle"></i></a>';
                 } else {
-                    echo '<a href="#" onclick="showModal()" class="login-button"><i class="fas fa-user-circle"></i></a>';
+                    echo '<a href="#" onclick="showModal()" class="login-button"><img src="'. $_SESSION['pfp'] .'"/></a>';
                 }
                 ?>
 
