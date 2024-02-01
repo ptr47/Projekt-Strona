@@ -7,6 +7,7 @@ $login = $_POST['login'];
 $password = $_POST['password'];
 $password_repeat = $_POST['password_repeat'];
 $newsletter = $_POST['newsletter'];
+$email = $_POST['email'];
 if(empty($newsletter)) {
     $newsletter=0;
 }
@@ -23,10 +24,10 @@ if (!$count == 0) {
     if ($password != $password_repeat) {
         header("location: ../login_page.php?error=3");
     } else {
-        $query = "INSERT INTO users (id, user, pass, newsletter) VALUES (NULL, '$login', '$password', '$newsletter');";
+        $query = "INSERT INTO users (id, user, pass, email, newsletter) VALUES (NULL, '$login', '$password', '$email' ,'$newsletter');";
         mysqli_query($connection, $query);
         $_SESSION['login'] = $login;
-        $_SESSION['pfp'] = 'img/pfp/default-pfp.png';
+        $_SESSION['lastchange'] = 'Nigdy';
         header("location: ../index.php?inf=1");
     }
 }

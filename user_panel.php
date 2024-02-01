@@ -23,6 +23,7 @@ if (!isset($_SESSION['login'])) {
     #edit-data {
       text-align: center;
     }
+
     #edit-data>img {
       height: 5rem;
     }
@@ -41,18 +42,27 @@ if (!isset($_SESSION['login'])) {
       <!-- navbar.html -->
     </header>
     <main>
-      <form id="edit-data" action="user/edit_data.php" method="post" enctype="multipart/form-data">
-        <?php echo '<img src="'.$_SESSION['pfp'].'"/><br><br><br>'; ?>
-        Zmień obrazek:
-        <input type="file" id="pfp" name="pfp" accept="image/jpeg, image/png, image/gif"><br><br>
-        Data urodzenia:
-        <input type="date" id="birthdate" name="birthdate"><br><br>
-        Zmień email:
-        <input type="email" id="email" name="email"><br><br>
-        Zmień hasło: 
-        <input type="text" id="password" name="password"><br><br>
-        <input type="submit" value="Zapisz">
-      </form>
+      <div id="edit-data">
+        <?php 
+        echo '<img src="' . $_SESSION['pfp'] . '"/><br><br><br>'; 
+        echo "<h2>".$_SESSION['login']."</h2>"
+        ?>
+        <form action="user/edit_data.php" method="post" enctype="multipart/form-data">
+
+          Zmień obrazek:
+          <input type="file" id="pfp" name="pfp" accept="image/jpeg, image/png, image/gif"><br><br>
+          Data urodzenia:
+          <input type="date" id="birthdate" name="birthdate"><br><br>
+          Zmień email:
+          <input type="email" id="email" name="email"><br><br>
+          Zmień hasło:
+          <input type="text" id="password" name="password"><br>
+          <?php echo "<small>Ostatnia zmiana: ". $_SESSION['lastchange']."</small>" ?>
+          <br><br>
+          
+          <input type="submit" value="Zapisz">
+        </form>
+      </div>
     </main>
     <footer>
       <!-- footer.html -->

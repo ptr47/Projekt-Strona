@@ -15,6 +15,7 @@
     echo '<a href="user/admin.php">Panel administracyjny</a>'
     ?>
     <a href="user_panel.php">Edytuj dane</a>
+    <a href="user/delete_acc.php">Usuń konto</a>
     <a href="user/logout.php">Wyloguj</a>
 </div>
 

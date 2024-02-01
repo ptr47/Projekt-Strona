@@ -12,11 +12,11 @@ $result = mysqli_query($connection, $query);
 
 if ($result->num_rows == 1) {
     $_SESSION['login'] = $login;
-    $obr = $result->fetch_assoc()['pfp'];
+    $lastchange = $result->fetch_assoc()['pfp'];
     if(empty($obr)) {
-        $_SESSION['pfp'] = 'img/pfp/default-pfp.png';
+        $_SESSION['lastchange'] = 'Nigdy';
     } else {
-        $_SESSION['pfp'] = $result->fetch_assoc()['pfp'];
+        $_SESSION['lastchange'] = $result->fetch_assoc()['pass_change'];
     }
     header("location: ../index.php");
 } else {
