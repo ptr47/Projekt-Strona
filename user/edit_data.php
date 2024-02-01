@@ -7,13 +7,20 @@ if(isset($_FILES['pfp'])) {
         $fileTmpName = $file['tmp_name'];
         $fileType = $file['type'];
 
+var_dump($fileName);
+var_dump($fileTmpName);
+var_dump($fileType);
+
         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
         if (in_array($fileType, $allowedTypes)) {
-            $newFileName = uniqid() . '_' . $fileName;
-            
-            move_uploaded_file($fileTmpName, 'img/pfp/' . $newFileName);
-            
-            echo "Plik został przesłany poprawnie.";
+            //TO DO: save pictures to database
+
+            // Saving files doesnt work(?)
+            // $newFileName = uniqid() . '_' . $fileName;
+            // $fileDestination = 'pfp/' . $newFileName;
+            // if(!move_uploaded_file($fileTmpName, $fileDestination)) {
+            //     echo "Wystąpił błąd podczas zapisywania pliku.";
+            // }
         } else {
             header("location: ../user_panel.php?err=format");
         }
@@ -21,3 +28,9 @@ if(isset($_FILES['pfp'])) {
         echo "Błąd podczas przesyłania pliku: " . $file['error'];
     }
 }
+if(isset($_POST['birthdate'])) {
+
+    var_dump($_POST['birthdate']);
+$birthdate=date('', strtotime($_POST['']));
+}
+// TO DO: change for password and email

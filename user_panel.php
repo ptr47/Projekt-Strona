@@ -47,10 +47,10 @@ if (!isset($_SESSION['login'])) {
         <input type="file" id="pfp" name="pfp" accept="image/jpeg, image/png, image/gif"><br><br>
         Data urodzenia:
         <input type="date" id="birthdate" name="birthdate"><br><br>
-        Zmień hasło: 
-        <input type="text" id="password" name="password"><br><br>
         Zmień email:
         <input type="email" id="email" name="email"><br><br>
+        Zmień hasło: 
+        <input type="text" id="password" name="password"><br><br>
         <input type="submit" value="Zapisz">
       </form>
     </main>
