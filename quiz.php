@@ -33,28 +33,50 @@ include("session.php");
         <main>
             <button onclick="startQuiz()" id="quiz-start" class="button">START</button>
             <div class="quiz-container">
-                <?php
-                $result = $connection->execute_query("SELECT * FROM quiz ORDER BY RAND() LIMIT 5");
+                <form action="submit_quiz.php" method="post">
+                    <?php
+                    $result = $connection->execute_query("SELECT * FROM quiz ORDER BY RAND() LIMIT 5");
 
-                if ($result->num_rows > 0) {
-
-                    echo '<form action=' . 'submit_quiz.php' . ' method="post">';
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<div class='quiz-question'>";
-                        echo "<p>{$row['question']}</p>";
-                        echo "<input type='radio' name='question-{$row['id']}' value='a'> {$row['a']}<br>";
-                        echo "<input type='radio' name='question-{$row['id']}' value='b'> {$row['b']}<br>";
-                        echo "<input type='radio' name='question-{$row['id']}' value='c'> {$row['c']}<br>";
-                        echo "<input type='radio' name='question-{$row['id']}' value='d'> {$row['d']}<br>";
-                        echo "</div>";
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<div class='quiz-question'>";
+                            echo "<p>{$row['question']}</p>";
+                            echo "<input type='radio' name='question-{$row['id']}' value='a'> {$row['a']}<br>";
+                            echo "<input type='radio' name='question-{$row['id']}' value='b'> {$row['b']}<br>";
+                            echo "<input type='radio' name='question-{$row['id']}' value='c'> {$row['c']}<br>";
+                            echo "<input type='radio' name='question-{$row['id']}' value='d'> {$row['d']}<br>";
+                            echo "</div>";
+                        }
+                    } else {
+                        echo "Brak pytań w bazie danych.";
                     }
-                    echo '<br><br><input id="quiz-finish" class="button" type="submit" value="Koniec">';
-                    echo "</form>";
-                } else {
-                    echo "Brak pytań w bazie danych.";
-                }
-                ?>
-                <!-- <div class="quiz-question img-q">
+                    ?>
+
+                    <!-- <div class="quiz-question img-q">
+                        <p>Dopasuj nazwy do obrazków</p>
+                        <?php
+                        // $arr_bronie = array();
+                        // $sql = "SELECT * FROM guns ORDER BY RAND() LIMIT 3";
+                        // $result = $connection->query($sql);
+                        // echo '<div class="question-images">';
+                        // if ($result->num_rows > 0) {
+                        //     while ($row = $result->fetch_assoc()) {
+                        //         echo "<div class='tile' id='q-i" . $row["id"] . "'><img src='" . $row["image"] . "' alt='Obrazek " . $row["id"] . "'><p class='target'></p></div>";
+                        //         array_push($arr_bronie, $row["name"]);
+                        //     }
+                        // }
+                        // echo '</div>';
+                        // echo '<br>';
+                        // echo '<div class="question-names">';
+                        // foreach ($arr_bronie as $nazwa) {
+                        //     echo '<div draggable="true">' . $nazwa . '</div>';
+                        // }
+                        // echo '</div';
+                        ?>
+                    </div> -->
+
+                    
+                    <!-- <div class="quiz-question img-q">
                     <p>Dopasuj nazwy do obrazków</p>
                     <div class="question-images">
                         <div class="tile" id="q-i1"><img src="img/guns/M16A2.jpg" alt="Obrazek 1">
@@ -76,6 +98,9 @@ include("session.php");
                         <div draggable="true" id="q-n5">M1918A2 BAR</div>
                     </div>
                 </div> -->
+
+                    <br><br><input id="quiz-finish" class="button" type="submit" value="Koniec">
+                </form>
             </div>
             <div id="quiz-result">
                 <?php
@@ -83,8 +108,8 @@ include("session.php");
                     $score = 0;
 
                     foreach ($_POST as $key => $value) {
-                        $question_id = str_replace("question-", "", $key);
-                        $result = $connection->execute_query("SELECT answer FROM quiz WHERE id = $question_id");
+                        $id = str_replace("question-", "", $key);
+                        $result = $connection->execute_query("SELECT answer FROM quiz WHERE id = $id");
 
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();

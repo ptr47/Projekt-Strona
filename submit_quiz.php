@@ -36,8 +36,8 @@ include("session.php");
                     $score = 0;
 
                     foreach ($_POST as $key => $value) {
-                        $question_id = str_replace("question-", "", $key);
-                        $result = $connection->execute_query("SELECT answer FROM quiz WHERE id = $question_id");
+                        $id = str_replace("question-", "", $key);
+                        $result = $connection->execute_query("SELECT answer FROM quiz WHERE id = $id");
 
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
