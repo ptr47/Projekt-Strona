@@ -113,6 +113,23 @@ if ($result->num_rows > 0) {
         xhr.send();
       }
     }
+    function changeEditPanel(typ) {
+      if (typ == 0) {
+        document.getElementById("edit-panel-quiz").style.display = "block";
+        document.getElementById("heder").innerText = "Edytowanie Quizu";
+      } 
+      else if (typ == 1) {
+        questionIdField.style.display = "none";
+        document.getElementById("question_id").value = "";
+        document.getElementById("question").value = "";
+        document.getElementById("answer_a").value = "";
+        document.getElementById("answer_b").value = "";
+        document.getElementById("answer_c").value = "";
+        document.getElementById("answer_d").value = "";
+        document.getElementById("correct_answer").value = "";
+        submitButton.value = "Dodaj";
+      }
+    }
   </script>
 
 </head>
@@ -130,14 +147,21 @@ if ($result->num_rows > 0) {
     </header>
     <main>
       <div id="edit-data">
-        <h2>Edytowanie quizu</h2>
-        <form method="post" action="addchange_question.php">
+        <div>
+          <input onchange="changeEditPanel(0)" type="radio" name="change-edit-panel" id="radio-quiz" checked>
+          <label for="radio-quiz">Quiz</label>
+          <input onchange="changeEditPanel(1)" type="radio" name="change-edit-panel" id="radio-db">
+          <label for="radio-db">Baza danych</label>
+        </div>
+        <h2 id="heder">Edytowanie quizu</h2>
+        <form id="edit-panel-quiz" method="post" action="addchange_question.php">
           <input type="checkbox" id="change_question_checkbox" name="change_question_checkbox"
             onchange="toggleQuestionIdField()">Tryb Edycji Pytań<br><br>
 
           <div id="question_id_field">
             ID Pytania do zmiany:
-            <input type="number" id="question_id" name="question_id" onchange="getQuestionDetails()" min="1" max=""><br><br>
+            <input type="number" id="question_id" name="question_id" onchange="getQuestionDetails()" min="1"
+              max=""><br><br>
           </div>
 
           Treść pytania:<br>

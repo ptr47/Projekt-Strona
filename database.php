@@ -72,7 +72,7 @@ include("session.php");
             <option value="rewolwerowa">rewolwerowa</option>
             <option value="pośrednia">pośrednia</option>
             <option value="karabinowa">karabinowa</option>
-            <option value="karabinowa">śrutowa</option>
+            <option value="śrutowa">śrutowa</option>
           </select>
         </div>
         <div class="sort-list"><button onclick="resetFilters()" id="db-reset-button">Reset</button></div>
@@ -80,51 +80,47 @@ include("session.php");
       <!-- TODO: dynamically create tiles from db  -->
       <!-- CONTAINER WEAPONS -->
       <div class="tile-container" id="container-weapons">
-        <div class="tile" onclick="tileShow(event)">
-          <img src="img/guns/Ak74.png" alt="AK-74">
-          <p class="tile-name">AK-74</p>
-          <p class="tile-type">karabinek</p>
-          <p class="tile-id">0</p>
-        </div>
-        <div class="tile" onclick="tileShow(event)">
-          <img src="img/guns/RPK.jpg" alt="RPK">
-          <p class="tile-name">RPK</p>
-          <p class="tile-type">karabinek</p>
-          <p class="tile-id">2</p>
-        </div>
-        <div class="tile" onclick="tileShow(event)">
-          <img src="img/guns/M16A2.jpg" alt="M16A2">
-          <p class="tile-name">M16A2</p>
-          <p class="tile-type">karabinek</p>
-          <p class="tile-id">4</p>
-        </div>
-        <div class="tile" onclick="tileShow(event)">
-          <img src="img/guns/M1918A2BAR.webp" alt="M1918A2 BAR">
-          <p class="tile-name">M1918A2 BAR</p>
-          <p class="tile-type">karabin</p>
-          <p class="tile-id">6</p>
-        </div>
-        <div class="tile" onclick="tileShow(event)">
-          <img src="img/guns/M1Garand.webp" alt="M1 Garand">
-          <p class="tile-name">M1 Garand</p>
-          <p class="tile-type">karabin</p>
-          <p class="tile-id">8</p>
-        </div>
+        <?php $sql = "SELECT * FROM guns";
+        $result = $connection->execute_query($sql);
+
+        // Wyświetlenie wyników
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            echo '<div class="tile">';
+            echo '<img src="' . $row["image"] . '" alt="' . $row["name"] . '">';
+            echo '<p class="tile-name">' .
+              $row["name"] . '</p>';
+            echo '<p class="tile-type">' . $row["type"] . '</p>';
+            echo '<p class="tile-id">' .
+              $row["id"] . '</p>';
+            echo '</div>';
+          }
+        } else {
+          echo "Brak wyników.";
+        }
+        ?>
       </div>
       <!-- CONTAINER AMMO -->
       <div class="tile-container" id="container-ammo">
-        <div class="tile" onclick="tileShow(event)">
-          <img src="img/ammo/9x19.jpg" alt="9x19mm Parabellum">
-          <p class="tile-name">9x19mm Parabellum</p>
-          <p class="tile-type">pistoletowa</p>
-          <p class="tile-id">1</p>
-        </div>
-        <div class="tile" onclick="tileShow(event)">
-          <img src="img/ammo/556x45.jpg" alt="5.56x45mm NATO">
-          <p class="tile-name">5.56x45mm NATO</p>
-          <p class="tile-type">pośrednia</p>
-          <p class="tile-id">3</p>
-        </div>
+      <?php $sql = "SELECT * FROM ammo";
+        $result = $connection->execute_query($sql);
+
+        // Wyświetlenie wyników
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            echo '<div class="tile">';
+            echo '<img src="' . $row["image"] . '" alt="' . $row["name"] . '">';
+            echo '<p class="tile-name">' .
+              $row["name"] . '</p>';
+            echo '<p class="tile-type">' . $row["type"] . '</p>';
+            echo '<p class="tile-id">' .
+              $row["id"] . '</p>';
+            echo '</div>';
+          }
+        } else {
+          echo "Brak wyników.";
+        }
+        ?>
       </div>
     </main>
     <footer>
