@@ -45,7 +45,7 @@ include("session.php");
             <!-- footer.html -->
         </footer>
     </div>
-    
+
     <!--Scripts below-->
     <script src="scripts/load.js"></script>
     <script src="scripts/dropdownMenu.js"></script>

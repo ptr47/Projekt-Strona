@@ -3,6 +3,7 @@
 
 <?php
 include("session.php");
+
 ?>
 
 <head>
@@ -31,25 +32,29 @@ include("session.php");
         </header>
         <main>
             <button onclick="startQuiz()" id="quiz-start" class="button">START</button>
-            <form class="quiz-container">
+            <div class="quiz-container">
                 <?php
-                $result = $connection->execute_query("SELECT * FROM quiz");
-                
-                echo "<form action='submit_quiz.php' method='post'>";
-                while ($row = $result->fetch_assoc()) {
-                    echo "<div class='quiz-question'>";
-                    echo "<p>{$row['question']}</p>";
-                    echo "<input type='radio' name='question-{$row['id']}' value='a'> {$row['a']}<br>";
-                    echo "<input type='radio' name='question-{$row['id']}' value='b'> {$row['b']}<br>";
-                    echo "<input type='radio' name='question-{$row['id']}' value='c'> {$row['c']}<br>";
-                    echo "<input type='radio' name='question-{$row['id']}' value='d'> {$row['d']}<br>";
-                    echo "</div>";
-                }
-                echo "<button type='submit'>Submit</button>";
-                echo "</form>";
+                $result = $connection->execute_query("SELECT * FROM quiz ORDER BY RAND() LIMIT 5");
 
+                if ($result->num_rows > 0) {
+
+                    echo '<form action=' . $_SERVER["PHP_SELF"] . ' method="post">';
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<div class='quiz-question'>";
+                        echo "<p>{$row['question']}</p>";
+                        echo "<input type='radio' name='question-{$row['id']}' value='a'> {$row['a']}<br>";
+                        echo "<input type='radio' name='question-{$row['id']}' value='b'> {$row['b']}<br>";
+                        echo "<input type='radio' name='question-{$row['id']}' value='c'> {$row['c']}<br>";
+                        echo "<input type='radio' name='question-{$row['id']}' value='d'> {$row['d']}<br>";
+                        echo "</div>";
+                    }
+                    echo '<br><br><input id="quiz-finish" class="button" type="submit" value="Koniec">';
+                    echo "</form>";
+                } else {
+                    echo "Brak pytań w bazie danych.";
+                }
                 ?>
-                <div class="quiz-question img-q">
+                <!-- <div class="quiz-question img-q">
                     <p>Dopasuj nazwy do obrazków</p>
                     <div class="question-images">
                         <div class="tile" id="q-i1"><img src="img/guns/M16A2.jpg" alt="Obrazek 1">
@@ -70,13 +75,29 @@ include("session.php");
                         <div draggable="true" id="q-n4">Beretta M9</div>
                         <div draggable="true" id="q-n5">M1918A2 BAR</div>
                     </div>
-                </div>
-                <br>
-                <button onclick="endQuiz()" id="quiz-finish" class="button">Koniec</button>
-            </form>
+                </div> -->
+            </div>
             <div id="quiz-result">
-                <h3>Koniec quizu</h3>
-                <p>Twój wynik to: </p>
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $score = 0;
+
+                    foreach ($_POST as $key => $value) {
+                        $question_id = str_replace("question-", "", $key);
+                        $result = $connection->execute_query("SELECT answer FROM quiz WHERE id = $question_id");
+
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                            if ($value === $row['answer']) {
+                                $score++;
+                            }
+                        }
+                    }
+
+                    echo "<h3>Koniec quizu</h3>";
+                    echo "<p>Twój wynik to: $score</p>";
+                }
+                ?>
             </div>
         </main>
         <footer>

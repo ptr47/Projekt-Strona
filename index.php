@@ -32,8 +32,7 @@ include("session.php");
       if (!isset($_SESSION['login'])) {
         echo 'Witaj użytkowniku <br>';
         echo '<a href="login_page.php">Zaloguj się</a> dla pełni doświadczeń. <br>';
-      }
-      else {
+      } else {
         echo 'Witaj <b>';
         echo $_SESSION['login'];
         echo '</b><br>';

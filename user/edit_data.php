@@ -45,7 +45,7 @@ if (!empty($_POST['password'])) {
     $password = $_POST['password'];
     $sql = "UPDATE `users` SET `pass` = ?, `pass_change` = current_timestamp() WHERE `users`.`user` = '$user'; ";
     $connection->execute_query($sql, [$password]);
-    $_SESSION['lastchange']  = $connection->query("SELECT * FROM `users` WHERE `users`.`user` = '$user'; ")->fetch_assoc()['pass_change'];
+    $_SESSION['lastchange'] = $connection->query("SELECT * FROM `users` WHERE `users`.`user` = '$user'; ")->fetch_assoc()['pass_change'];
 }
 
 header("location: ../user_panel.php");

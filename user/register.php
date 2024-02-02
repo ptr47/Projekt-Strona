@@ -8,14 +8,13 @@ $password = $_POST['password'];
 $password_repeat = $_POST['password_repeat'];
 $newsletter = $_POST['newsletter'];
 $email = $_POST['email'];
-if(empty($newsletter)) {
-    $newsletter=0;
-}
-else {
-    $newsletter =1;
+if (empty($newsletter)) {
+    $newsletter = 0;
+} else {
+    $newsletter = 1;
 }
 
-$result = $connection->execute_query("SELECT * FROM users WHERE user=?",[$login]);
+$result = $connection->execute_query("SELECT * FROM users WHERE user=?", [$login]);
 $count = $result->num_rows;
 if (!$count == 0) {
     header("location: ../login_page.php?error=2");

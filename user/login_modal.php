@@ -11,14 +11,14 @@
     include("../session.php");
     echo 'Login: ';
     echo $_SESSION["login"];
-    // if($_SESSION["login"]=="admin")
-    // echo '<a href="user/admin.php">Panel administracyjny</a>'
-    ?>
-    <a href="user_panel.php">Edytuj dane</a>
+    if ($_SESSION["login"] == "admin")
+        echo '<a href="user/admin.php">Panel administracyjny</a>'
+            ?>
+        <a href="user_panel.php">Edytuj dane</a>
     <?php if ($_SESSION["login"] != "admin")
-    echo '<a href="user/delete_acc.php">Usuń konto</a>'
-    ?>
-    <a href="user/logout.php">Wyloguj</a>
-</div>
+        echo '<a href="user/delete_acc.php">Usuń konto</a>'
+            ?>
+        <a href="user/logout.php">Wyloguj</a>
+    </div>
 
-</html>
+    </html>
