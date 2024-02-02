@@ -30,9 +30,7 @@ include("session.php");
         <header>
             <!-- navbar.html -->
         </header>
-        <main>
-
-            <div id="quiz-result">
+        <main style="text-align: center;">
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $score = 0;
@@ -50,10 +48,12 @@ include("session.php");
                     }
 
                     echo "<h3>Koniec quizu</h3>";
-                    echo "<p>Twój wynik to: $score</p>";
+                    echo "<p>Twój wynik to: $score/5</p>";
+                } else {
+                    header("location: quiz.php");
                 }
                 ?>
-            </div>
+                <a href="quiz.php">Wróć</a>
         </main>
         <footer>
             <!-- footer.html -->

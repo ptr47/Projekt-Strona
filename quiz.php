@@ -38,7 +38,7 @@ include("session.php");
 
                 if ($result->num_rows > 0) {
 
-                    echo '<form action=' . $_SERVER["PHP_SELF"] . ' method="post">';
+                    echo '<form action=' . 'submit_quiz.php' . ' method="post">';
                     while ($row = $result->fetch_assoc()) {
                         echo "<div class='quiz-question'>";
                         echo "<p>{$row['question']}</p>";
