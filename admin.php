@@ -79,7 +79,7 @@ if ($result->num_rows > 0) {
       var questionIdField = document.getElementById("question_id_field");
       if (checkBox.checked == true) {
         questionIdField.style.display = "block";
-        submitButton.value = "Zmień Pytanie";
+        submitButton.value = "Zmień";
       } else {
         questionIdField.style.display = "none";
         document.getElementById("question_id").value = "";
@@ -89,7 +89,7 @@ if ($result->num_rows > 0) {
         document.getElementById("answer_c").value = "";
         document.getElementById("answer_d").value = "";
         document.getElementById("correct_answer").value = "";
-        submitButton.value = "Dodaj Pytanie";
+        submitButton.value = "Dodaj";
       }
     }
     function getQuestionDetails() {
@@ -163,7 +163,7 @@ if ($result->num_rows > 0) {
             <option value="d">D</option>
           </select><br><br>
 
-          <input type="submit" id="submitButton" value="Dodaj Pytanie">
+          <input type="submit" id="submitButton" value="Dodaj">
         </form>
       </div>
     </main>
