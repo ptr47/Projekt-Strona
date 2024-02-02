@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 02, 2024 at 01:44 AM
+-- Generation Time: Feb 02, 2024 at 03:16 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -96,7 +96,8 @@ INSERT INTO `quiz` (`id`, `question`, `a`, `b`, `c`, `d`, `answer`) VALUES
 (3, 'W którym wieku pojawiły się pierwsze prototypy broni odtylcowej?', 'XIV', 'XVII', 'XIX', 'XX', 'a'),
 (4, 'Który rodzaj broni palnej był prekursorem karabinów maszynowych?', 'Karabin szturmowy', 'Karabin automatyczny', 'Karabin jednostrzałowy', 'Kartaczownica', 'd'),
 (5, 'Kto był twórcą pierwszego udanego odtylcowego karabinu iglicowego?', 'Samuel Colt', 'Johann Nikolaus von Dreyse', 'Casimir Lefaucheux', 'Hiram Maxim', 'b'),
-(6, 'Co oznacza skrót StG?', 'Sturmgewehr', 'Schützengewehr', 'Sicherheitsgewehr', 'Sturzgeschoss', 'a');
+(6, 'Co oznacza skrót StG?', 'Sturmgewehr', 'Schützengewehr', 'Sicherheitsgewehr', 'Sturzgeschoss', 'a'),
+(7, 'Która z tych broni to karabin snajperski?', 'MG 42', 'SIG SG 550', 'Desert Eagle', 'SVD', 'd');
 
 -- --------------------------------------------------------
 
@@ -176,7 +177,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `quiz`
 --
 ALTER TABLE `quiz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
