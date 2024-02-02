@@ -12,7 +12,7 @@
     echo 'Login: ';
     echo $_SESSION["login"];
     if ($_SESSION["login"] == "admin")
-        echo '<a href="admin_panel.php">Panel administracyjny</a>'
+        echo '<a href="admin.php">Panel administracyjny</a>'
             ?>
         <a href="user_panel.php">Edytuj dane</a>
     <?php if ($_SESSION["login"] != "admin")

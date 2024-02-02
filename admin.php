@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="pl">
 <?php
-include("../session.php");
-if($_SESSION['login']!="admin")
-header("location: ../index.php")
+include("session.php");
+if ($_SESSION['login'] != "admin")
+  header("location: index.php");
+
+$result = $connection->query("SELECT MAX(id) AS last_question_id FROM quiz");
+
+if ($result->num_rows > 0) {
+  $row = $result->fetch_assoc();
+  $last_question_id = $row["last_question_id"];
+} else {
+  $last_question_id = 0;
+}
 ?>
 
 <head>
@@ -23,7 +32,89 @@ header("location: ../index.php")
     #edit-data>img {
       height: 5rem;
     }
+
+    form {
+      margin-top: 2rem;
+    }
+
+    input[type="checkbox"] {
+      margin-bottom: 1rem;
+    }
+
+    #question_id_field {
+      display: none;
+    }
+
+    textarea,
+    input[type="text"],
+    select,
+    input[type="submit"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
   </style>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("question_id").max = <?php echo $last_question_id; ?>;
+    })
+  </script>
+  <script>
+    function toggleQuestionIdField() {
+      var checkBox = document.getElementById("change_question_checkbox");
+      var questionIdField = document.getElementById("question_id_field");
+      if (checkBox.checked == true) {
+        questionIdField.style.display = "block";
+        submitButton.value = "Zmień Pytanie";
+      } else {
+        questionIdField.style.display = "none";
+        document.getElementById("question_id").value = "";
+        document.getElementById("question").value = "";
+        document.getElementById("answer_a").value = "";
+        document.getElementById("answer_b").value = "";
+        document.getElementById("answer_c").value = "";
+        document.getElementById("answer_d").value = "";
+        document.getElementById("correct_answer").value = "";
+        submitButton.value = "Dodaj Pytanie";
+      }
+    }
+    function getQuestionDetails() {
+      var questionId = document.getElementById("question_id").value;
+      if (questionId.trim() != "") {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            var questionData = JSON.parse(xhr.responseText);
+            if (questionData) {
+              document.getElementById("question").value = questionData.question;
+              document.getElementById("answer_a").value = questionData.answer_a;
+              document.getElementById("answer_b").value = questionData.answer_b;
+              document.getElementById("answer_c").value = questionData.answer_c;
+              document.getElementById("answer_d").value = questionData.answer_d;
+              document.getElementById("correct_answer").value = questionData.correct_answer;
+            }
+          }
+        };
+        xhr.open("GET", "get_question.php?id=" + questionId, true);
+        xhr.send();
+      }
+    }
+  </script>
+
 </head>
 
 <body>
@@ -39,28 +130,40 @@ header("location: ../index.php")
     </header>
     <main>
       <div id="edit-data">
-        <?php 
-        echo '<img src="' . $_SESSION['pfp'] . '"/><br><br><br>'; 
-        echo "<h2>".$_SESSION['login']."</h2>"
-        ?>
-        <form action="user/edit_data.php" method="post" enctype="multipart/form-data">
+        <h2>Edytowanie quizu</h2>
+        <form method="post" action="addchange_question.php">
+          <input type="checkbox" id="change_question_checkbox" name="change_question_checkbox"
+            onchange="toggleQuestionIdField()">Tryb Edycji Pytań<br><br>
 
-          Zmień obrazek:
-          <input type="file" id="pfp" name="pfp" accept="image/jpeg, image/png, image/gif"><br><br>
-          Zmień datę urodzenia:
-          <input type="date" id="birthdate" name="birthdate"><br>
-          <?php echo "<small>Data urodzenia: ". $_SESSION['birthdate']."</small>"  ?>
-          <br><br>
-          Zmień email:
-          <input type="email" id="email" name="email"><br>
-          <?php echo "<small>Aktualny email: ". $_SESSION['email']."</small>"  ?>
-          <br><br>
-          Zmień hasło:
-          <input type="text" id="password" name="password"><br>
-          <?php echo "<small>Ostatnia zmiana: ". $_SESSION['lastchange']."</small>" ?>
-          <br><br>
-          
-          <input type="submit" value="Zapisz">
+          <div id="question_id_field">
+            ID Pytania do zmiany:
+            <input type="number" id="question_id" name="question_id" onchange="getQuestionDetails()" min="1" max=""><br><br>
+          </div>
+
+          Treść pytania:<br>
+          <textarea id="question" name="question" rows="2" cols="100" required></textarea><br>
+
+          <label for="answer_a">Odpowiedź A:</label><br>
+          <input type="text" id="answer_a" name="answer_a" required><br>
+
+          <label for="answer_b">Odpowiedź B:</label><br>
+          <input type="text" id="answer_b" name="answer_b" required><br>
+
+          <label for="answer_c">Odpowiedź C:</label><br>
+          <input type="text" id="answer_c" name="answer_c" required><br>
+
+          <label for="answer_d">Odpowiedź D:</label><br>
+          <input type="text" id="answer_d" name="answer_d" required><br>
+
+          Poprawna odpowiedź:
+          <select id="correct_answer" name="correct_answer">
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
+          </select><br><br>
+
+          <input type="submit" id="submitButton" value="Dodaj Pytanie">
         </form>
       </div>
     </main>
