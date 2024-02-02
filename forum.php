@@ -37,9 +37,9 @@ if (!isset($_SESSION['login'])) {
             <div id="addpost">
                 <form action="process_post.php" method="post">
                     Tytuł<br>
-                    <input type="text" id="title" name="title" required><br>
+                    <input type="text" id="title" name="title" maxlength="50" required><br>
                     Treść<br>
-                    <textarea id="content" name="content" required></textarea><br>
+                    <textarea id="content" name="content" maxlength="1000" required></textarea><br>
 
                     <input type="submit" value="Zamieść">
                 </form>
@@ -53,7 +53,7 @@ if (!isset($_SESSION['login'])) {
                 $commentResult = $connection->query("SELECT * FROM comments WHERE post_id = $postId");
                 $username = $post['user_id'];
                 $userResult = $connection->query("SELECT user FROM users WHERE id= $username");
-                $username = "Deleted";
+                $username = "[Deleted]";
                 if ($userResult) {
                     $userData = $userResult->fetch_row();
                     if ($userData)
@@ -70,14 +70,20 @@ if (!isset($_SESSION['login'])) {
                     </th>
                     <th class="post-title">' . $post['title'] . '</th>
                 </tr>
-                <tr><td colspan="2"><p>' . $post['tresc'] . '</p></td></tr>
-                </table>';
+                <tr><td colspan="2"><p>' . $post['tresc'] . '</p></td></tr>';
+                if ($_SESSION['login'] == 'admin' || $_SESSION['login'] == $username) {
+                    echo '<td style="width: 5%;">';
+                    echo '<form action="user/delete_comment.php" method="post">';
+                    echo '<input type="hidden" name="post" value="'.$post['id'].'">';
+                    echo '<input class="delete-button" type="submit" value="Delete"></form></td>';
+                }
+                echo '</table>';
                 $userResult->free_result();
                 echo '<div class="comments">';
                 while ($comment = $commentResult->fetch_assoc()) {
                     $username = $comment['user_id'];
                     $userResult = $connection->query("SELECT user FROM users WHERE id= $username");
-                    $username = "Deleted";
+                    $username = "[Deleted]";
                     if ($userResult) {
                         $userData = $userResult->fetch_row();
                         if ($userData)
@@ -88,9 +94,12 @@ if (!isset($_SESSION['login'])) {
                         <td style="width: 10%;">' . $username . '</td>
                         <td style="width: 20%;">' . $comment['data'] . '</td>
                         <td>' . $comment['tresc'] . '</td>';
-                        if ($_SESSION['login'] == 'admin') {
-                        echo '<td style="width: 5%;"><button class="delete-button">Usuń</button></td>';
-                        }
+                    if ($_SESSION['login'] == 'admin' || $_SESSION['login'] == $username) {
+                        echo '<td style="width: 5%;">';
+                        echo '<form action="user/delete_comment.php" method="post" style="display:inline;">';
+                        echo '<input type="hidden" name="comment" value="'.$comment['id'].'">';
+                        echo '<input class="delete-button" type="submit" value="Delete"></form></td>';
+                    }
                     echo '</tr>
                     </table>';
                     $userResult->free_result();

@@ -51,10 +51,14 @@ if (!isset($_SESSION['login'])) {
 
           Zmień obrazek:
           <input type="file" id="pfp" name="pfp" accept="image/jpeg, image/png, image/gif"><br><br>
-          Data urodzenia:
-          <input type="date" id="birthdate" name="birthdate"><br><br>
+          Zmień datę urodzenia:
+          <input type="date" id="birthdate" name="birthdate"><br>
+          <?php echo "<small>Data urodzenia: ". $_SESSION['birthdate']."</small>"  ?>
+          <br><br>
           Zmień email:
-          <input type="email" id="email" name="email"><br><br>
+          <input type="email" id="email" name="email"><br>
+          <?php echo "<small>Aktualny email: ". $_SESSION['email']."</small>"  ?>
+          <br><br>
           Zmień hasło:
           <input type="text" id="password" name="password"><br>
           <?php echo "<small>Ostatnia zmiana: ". $_SESSION['lastchange']."</small>" ?>

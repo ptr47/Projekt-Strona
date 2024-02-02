@@ -15,8 +15,7 @@ else {
     $newsletter =1;
 }
 
-$query = "SELECT * FROM users WHERE user='$login'";
-$result = mysqli_query($connection, $query);
+$result = $connection->execute_query("SELECT * FROM users WHERE user=?",[$login]);
 $count = $result->num_rows;
 if (!$count == 0) {
     header("location: ../login_page.php?error=2");
@@ -24,10 +23,12 @@ if (!$count == 0) {
     if ($password != $password_repeat) {
         header("location: ../login_page.php?error=3");
     } else {
-        $query = "INSERT INTO users (id, user, pass, email, newsletter) VALUES (NULL, '$login', '$password', '$email' ,'$newsletter');";
-        mysqli_query($connection, $query);
+        $connection->execute_query("INSERT INTO users (id, user, pass, email, newsletter) VALUES (NULL, ?, ?, ? ,'$newsletter');", [$login, $password, $email]);
         $_SESSION['login'] = $login;
+        $_SESSION['pfp'] = "img/pfp/default-pfp.png";
         $_SESSION['lastchange'] = 'Nigdy';
+        $_SESSION['birthdate'] = '';
+        $_SESSION['email'] = $email;
         header("location: ../index.php?inf=1");
     }
 }

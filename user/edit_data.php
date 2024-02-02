@@ -30,19 +30,22 @@ $user = $_SESSION['login'];
 if (!empty($_POST['birthdate'])) {
     $birthdate = date('Y-m-d', strtotime($_POST['birthdate']));
     $sql = "UPDATE `users` SET `birthdate` = '$birthdate' WHERE `users`.`user` = '$user'; ";
-    mysqli_query($connection, $sql);
+    $connection->execute_query($sql);
+    $_SESSION["birthdate"] = $birthdate;
 }
 
 if (!empty($_POST['email'])) {
     $email = trim($_POST['email']);
-    $sql = "UPDATE `users` SET `email` = '$email' WHERE `users`.`user` = '$user'; ";
-    mysqli_query($connection, $sql);
+    $sql = "UPDATE `users` SET `email` = ? WHERE `users`.`user` = '$user'; ";
+    $connection->execute_query($sql, [$email]);
+    $_SESSION["email"] = $email;
 }
 
 if (!empty($_POST['password'])) {
     $password = $_POST['password'];
-    $sql = "UPDATE `users` SET `pass` = '$password', `pass_change` = DEFAULT WHERE `users`.`user` = '$user'; ";
-    mysqli_query($connection, $sql);
+    $sql = "UPDATE `users` SET `pass` = ?, `pass_change` = current_timestamp() WHERE `users`.`user` = '$user'; ";
+    $connection->execute_query($sql, [$password]);
+    $_SESSION['lastchange']  = $connection->query("SELECT * FROM `users` WHERE `users`.`user` = '$user'; ")->fetch_assoc()['pass_change'];
 }
 
 header("location: ../user_panel.php");

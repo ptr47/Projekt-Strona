@@ -31,35 +31,24 @@ include("session.php");
         </header>
         <main>
             <button onclick="startQuiz()" id="quiz-start" class="button">START</button>
-            <div class="quiz-container">
-                <div class="quiz-question">
-                    <p>Question?</p>
-                    <input type="radio" name="question-1" id="q1-a"><label for="q1-a">A</label>
-                    <input type="radio" name="question-1" id="q1-b"><label for="q1-b">B</label>
-                    <input type="radio" name="question-1" id="q1-c"><label for="q1-c">C</label>
-                    <input type="radio" name="question-1" id="q1-d"><label for="q1-d">D</label>
-                </div>
-                <div class="quiz-question">
-                    <p>Question?</p>
-                    <input type="radio" name="question-2" id="q2-a"><label for="q2-a">A</label>
-                    <input type="radio" name="question-2" id="q2-b"><label for="q2-b">B</label>
-                    <input type="radio" name="question-2" id="q2-c"><label for="q2-c">C</label>
-                    <input type="radio" name="question-2" id="q2-d"><label for="q2-d">D</label>
-                </div>
-                <div class="quiz-question">
-                    <p>Question?</p>
-                    <input type="radio" name="question-3" id="q3-a"><label for="q3-a">A</label>
-                    <input type="radio" name="question-3" id="q3-b"><label for="q3-b">B</label>
-                    <input type="radio" name="question-3" id="q3-c"><label for="q3-c">C</label>
-                    <input type="radio" name="question-3" id="q3-d"><label for="q3-d">D</label>
-                </div>
-                <div class="quiz-question">
-                    <p>Question?</p>
-                    <input type="radio" name="question-4" id="q4-a"><label for="q4-a">A</label>
-                    <input type="radio" name="question-4" id="q4-b"><label for="q4-b">B</label>
-                    <input type="radio" name="question-4" id="q4-c"><label for="q4-c">C</label>
-                    <input type="radio" name="question-4" id="q4-d"><label for="q4-d">D</label>
-                </div>
+            <form class="quiz-container">
+                <?php
+                $result = $connection->execute_query("SELECT * FROM quiz");
+                
+                echo "<form action='submit_quiz.php' method='post'>";
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class='quiz-question'>";
+                    echo "<p>{$row['question']}</p>";
+                    echo "<input type='radio' name='question-{$row['id']}' value='a'> {$row['a']}<br>";
+                    echo "<input type='radio' name='question-{$row['id']}' value='b'> {$row['b']}<br>";
+                    echo "<input type='radio' name='question-{$row['id']}' value='c'> {$row['c']}<br>";
+                    echo "<input type='radio' name='question-{$row['id']}' value='d'> {$row['d']}<br>";
+                    echo "</div>";
+                }
+                echo "<button type='submit'>Submit</button>";
+                echo "</form>";
+
+                ?>
                 <div class="quiz-question img-q">
                     <p>Dopasuj nazwy do obrazków</p>
                     <div class="question-images">
@@ -84,7 +73,7 @@ include("session.php");
                 </div>
                 <br>
                 <button onclick="endQuiz()" id="quiz-finish" class="button">Koniec</button>
-            </div>
+            </form>
             <div id="quiz-result">
                 <h3>Koniec quizu</h3>
                 <p>Twój wynik to: </p>
